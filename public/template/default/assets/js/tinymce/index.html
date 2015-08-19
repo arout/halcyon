@@ -1,0 +1,31 @@
+
+        <script type="text/javascript" src="<?= TEMPLATE_URL; ?>assets/js/tinymce/tinymce.min.js"></script>
+        <script type="text/javascript" src="<?= TEMPLATE_URL; ?>assets/js/tinymce/jquery.tinymce.min.js"></script>
+        <script>
+		tinymce.init({
+			selector: "textarea#elm1",
+			theme: "modern",
+			width: 1200,
+			height: 700,
+			plugins: [
+				 "advlist autolink bbcode link image lists charmap print preview hr anchor pagebreak spellchecker",
+				 "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
+				 "save table contextmenu directionality emoticons template paste textcolor"
+		   ],
+		   content_css: "<?= TEMPLATE_URL; ?>assets/js/tinymce/skins/lightgray/content.min.css",
+		   toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | l ink image | print preview media fullpage | forecolor backcolor emoticons",
+		   theme_advanced_fonts : "Arial=arial,helvetica,sans-serif;Courier New=courier new,courier,monospace;AkrutiKndPadmini=Akpdmi-n",
+		   theme_advanced_font_sizes : "10px,12px,14px,16px,18px,21px,24px,28px,36px,48px",
+		   theme_advanced_layout_manager : "RowLayout",
+		   style_formats: [
+		   		{title: 'Headline', block: 'h1', styles: {color: '#000000'}},
+				{title: 'Sub title', block: 'h3', styles: {color: '#7a7a7a'}},
+				{title: 'Bold text', inline: 'b'},
+				{title: 'Red text', inline: 'span', styles: {color: '#ff0000'}},
+				{title: 'Example 1', inline: 'span', classes: 'example1'},
+				{title: 'Example 2', inline: 'span', classes: 'example2'},
+				{title: 'Table styles'},
+				{title: 'Table row 1', selector: 'tr', classes: 'tablerow1'}
+			]
+		 }); 
+		</script>
