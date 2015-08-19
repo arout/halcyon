@@ -42,6 +42,10 @@ $container['template'] = function ($c) {
 	return new Template($c, $data = NULL);
 };
 
+$container['log'] = function ($c) {
+	return new Logger();
+};
+
 $container['system_controller'] = function ($container) {
 	return new SystemController($container);
 };

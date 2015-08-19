@@ -30,7 +30,7 @@ class Config {
 		$this->setting['site_slogan'] = 'MVC Framework for PHP 5.5+';
 
 		# Customer service or support email address
-		$this->setting['site_email'] = 'arout@kwfusion.com';
+		$this->setting['site_email'] = 'user@emailprovider.com';
 
 		# Site admin name
 		$this->setting['site_admin'] = 'Customer Care';

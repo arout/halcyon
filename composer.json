@@ -2,7 +2,9 @@
     "require": {
         "raveren/kint": "0.9",
         "phpmailer/phpmailer": "5.2.*",
-        "pimple/pimple": "~3.0"
+        "pimple/pimple": "~3.0",
+        "monolog/monolog": "~1.16",
+        "php-console/php-console": "~3.1"
     },
     "autoload": {
 		"psr-4": {

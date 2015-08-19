@@ -9,6 +9,7 @@
 */
 define('PUBLIC_PATH', BASEPATH.'public/');
 define('CONFIG_PATH', FUSION_PATH.'Config/');
+define('LOG_PATH', FUSION_PATH.'Log/');
 
 require CONFIG_PATH.'Config.php';
 $config = new Fusion\Config\Config;

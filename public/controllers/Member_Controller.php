@@ -131,9 +131,10 @@ class Member_Controller extends Fusion\System\SystemController {
     public function home() {
 		
 	    $data['session_username'] = $this->toolbox('session')->get('username');
-	    // Also acceptable:		$data['day'] = ['Monday', 'Tuesday', 'Wednesday']
-	    $data['day'] = array('Monday', 'Tuesday', 'Wednesday');
+	    $data['day'] = ['Monday', 'Tuesday', 'Wednesday'];
 	    $data['users'] = $this->model('Welcome')->select();
+        $this->log->save('Testing logging program', 'member.log');
+        // $this->load->file( 'maintenance.php' );
 	    $this->load->view('member/index', $data);			
 	}
     

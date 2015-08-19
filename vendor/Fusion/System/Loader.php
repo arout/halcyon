@@ -21,16 +21,16 @@ class Loader {
     public function file($file) {
         
 		$filename = BASEPATH.$file;
-			if ( is_readable( $filename ) ) {
-				require_once $filename;
-			} 
-			else {
-				echo '<div class="alert alert-danger"><h1>Fatal Error</h1>
-				<h4>Could not load core system file: '. $className .'.php</h4>
-				Please ensure that the file exists and permission to read the file (644)
-				</div>';
-				exit;
-			}
+
+		if ( is_readable( $filename ) ) {
+			require_once $filename;
+		} 
+		else {
+			echo '<div class="alert alert-danger"><h1>Fatal Error</h1>
+			<h4>Could not load file: '. $filename .'</h4>
+			Please ensure that the file exists and permission to read the file (644)
+			</div>';
+		}
 	}
     
 	public function folder($dir) {

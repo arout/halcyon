@@ -27,6 +27,8 @@ class SystemController {
 	public $cache;
 	public $toolbox;
 	public $load;
+	// System logger class
+	public $log;
 
 	public function __construct(\Pimple\Container $container) {
 
@@ -36,6 +38,7 @@ class SystemController {
 		$this->model   = $container['system_model'];
 		$this->load    = $container['load'];
 		$this->toolbox = $container['toolbox'];
+		$this->log 	   = $container['log'];
 		$this->session = self::session();
 		$this->input   = self::input();
 		$this->cache   = self::cache();
