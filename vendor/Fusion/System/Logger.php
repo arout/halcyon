@@ -50,4 +50,27 @@ class Logger {
     	}
     }
 
+    public function clean() {
+
+    	# Maximum size of log file allowed, in bytes ( 100000000 = 100 MB)
+    	$max_size = 100000000;
+
+    	chdir( LOG_PATH );
+
+    	foreach( glob( "*.log" ) as $_file ) {
+
+    		if( filesize( $_file ) >= $max_size ) {
+
+    			$tar = new \PharData( basename( $_file, ".log" ).'-error-log-archive.tar' );
+			    $tar->addFile( $_file );
+			    $tar->compress( \Phar::GZ );
+
+			    # Move tarball to archives folder once complete
+			    if( is_readable( 'archive/'.$_file.'-error-log-archive.tar') )
+					rename( $_file.'-error-log-archive.tar', 'archive/'.$_file.'-error-log-archive.tar' );
+				else
+					rename( $_file.'-error-log-archive.tar', 'archive/'.$_file.'_'.time().'-error-log-archive.tar' );
+    		}
+		}
+    }
 }
