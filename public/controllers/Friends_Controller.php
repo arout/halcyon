@@ -2,12 +2,17 @@
 
 class Friends_Controller extends Fusion\System\SystemController {
     
+    public function __construct( $container ) {
+
+        parent::__construct( $container );
+
+        if( $this->session->get('email') === FALSE ) {
+            $this->redirect('login');
+            exit;
+        }
+    }
+
     public function index() {
-        
-        if( $this->session->get('email') == FALSE ) {
-			$this->redirect('login');
-			exit;
-		}
         
         $data['friends'] = $this->toolbox('friends')->view_friends();
         $this->load->view('friends/index', $data);
@@ -59,4 +64,5 @@ class Friends_Controller extends Fusion\System\SystemController {
         $data['friends'] = $requests;
         $this->load->view('friends/request_sent', $data);
     }
+
 }

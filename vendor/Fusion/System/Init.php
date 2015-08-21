@@ -31,15 +31,15 @@ $container['cache'] = function ($c) {
 };
 
 $container['load'] = function ($c) {
-	return new Loader($c['database'], $c['toolbox']);
+	return new Loader($c);
 };
 
 $container['system_model'] = function ($c) {
 	return new SystemModel($c['database'], $c['toolbox']);
 };
 
-$container['template'] = function ($c) {
-	return new Template($c, $data = NULL);
+$container['template'] = function ($container) {
+	return new Template($container, $data = NULL);
 };
 
 $container['log'] = function ($c) {

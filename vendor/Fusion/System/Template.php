@@ -9,6 +9,7 @@ class Template{
 	public $load;
 	public $cache;
     public $toolbox;
+    public $session;
 
 	public function __construct( $c, $data ) {
 		
@@ -18,6 +19,7 @@ class Template{
 		$this->view 	= $c['view'];
 		$this->data 	= $data;
         $this->toolbox 	= $c['toolbox'];
+        $this->session 	= $c['session'];
 		$this->cache 	= self::cache();
 	}
 

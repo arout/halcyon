@@ -6,16 +6,19 @@ class Loader {
 	// The file being requested
 	public $_file;
 	// The directory containing requested file
-	public $_dir;
-	
-	public $db;
+	protected $_dir;
+	protected $db;
 	public $toolbox;
 	public $data;
+	protected $config;
+	protected $session;
 	
-	public function __construct( $db, $toolbox ) {
+	public function __construct( $c ) {
 	
-	    $this->db = $db;
-	    $this->toolbox = $toolbox;
+	    $this->db = $c['database'];
+	    $this->toolbox = $c['toolbox'];
+	    $this->config = $c['config'];
+	    $this->session = $c['session'];
 	}
     
     public function file($file) {
