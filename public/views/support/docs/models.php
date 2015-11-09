@@ -13,10 +13,10 @@
 When creating models, they will always extend the base class <samp>SystemModel</samp>:
 </p>
 <pre>
-class WelcomeModel extends Fusion\System\SystemModel {
+class WelcomeModel extends Hal\Core\SystemModel {
 
 	// Do something
-	
+
 }
 </pre>
 
@@ -35,7 +35,7 @@ $this->model( 'Welcome' );
 
 <p>
 The above would search the<code>/public/models</code> directory for a file named <strong>Welcome</strong>Model.php. Note that this would only load the model; it does not access or execute any of it's methods.
-Typically, you would only use this in your controller __construct() by assigning it to a variable (i.e.  $model = $this->model( 'Welcome' )), if it all. You can load a model and access it's methods directly, 
+Typically, you would only use this in your controller __construct() by assigning it to a variable (i.e.  $model = $this->model( 'Welcome' )), if it all. You can load a model and access it's methods directly,
 as shown below:
 </p>
 
@@ -43,7 +43,7 @@ as shown below:
 	// Access "select" method from WelcomeModel.php
 	$this->model( 'Welcome' )->select();
 </pre>
- 
+
 
 <p>
 Where select() is a method that could exist in the Welcome Model.
@@ -58,15 +58,15 @@ Where select() is a method that could exist in the Welcome Model.
 			$query = "SELECT * FROM users";
 			$result = $this->db->sql->prepare($query);
 			$result->execute();
-			
+
 			return $result;
 		}
 	</pre>
 </p>
 
 <p>
-	As you probably guessed, the above query simply selects all items from the users table. Take special note of the <code>return $result;</code> line above. 
-	That signifies that the results of the query is stored in an array. In other words, when you call<br> 
+	As you probably guessed, the above query simply selects all items from the users table. Take special note of the <code>return $result;</code> line above.
+	That signifies that the results of the query is stored in an array. In other words, when you call<br>
 	<strong>$this->model( 'Welcome' )->select()</strong> in your controller, it fetches the array contained in the select() method.
 </p>
 
@@ -82,7 +82,7 @@ Where select() is a method that could exist in the Welcome Model.
 </p>
 
 <p>
-	
+
 	<h5>And then to display data in our view file</h5>
 	<pre>
 		&lt;?php foreach( $this->data['users'] as $users ): ?>
@@ -99,19 +99,19 @@ Where select() is a method that could exist in the Welcome Model.
 <!--
 <h5>select_one() built in method from KW_Model:</h5>
 
-<?php foreach( $this->data['user'] as $user ): ?>
+<?php foreach ($this->data['user'] as $user): ?>
 <div class="white-row">
-	<strong>Username: <?= $user['username']; ?></strong><br>
-	<small>Real Name: <?= $user['first_name'] . ' ' . $user['last_name']; ?></small>
+	<strong>Username: <?=$user['username'];?></strong><br>
+	<small>Real Name: <?=$user['first_name'] . ' ' . $user['last_name'];?></small>
 </div>
-<?php endforeach; ?>
+<?php endforeach;?>
 
 <h5>User defined select() method from Welcome_Model:</h5>
 
-<?php foreach( $this->data['users'] as $users ): ?>
+<?php foreach ($this->data['users'] as $users): ?>
 <div class="white-row">
-	<strong>Username: <?= $users['username']; ?></strong><br>
-	<small>Real Name: <?= $users['first_name'] . ' ' . $users['last_name']; ?></small>
+	<strong>Username: <?=$users['username'];?></strong><br>
+	<small>Real Name: <?=$users['first_name'] . ' ' . $users['last_name'];?></small>
 </div>
-<?php endforeach; ?>
+<?php endforeach;?>
 -->
