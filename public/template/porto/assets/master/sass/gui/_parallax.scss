@@ -6,13 +6,7 @@
 	padding: 50px 0;
 	position: relative;
 	clear: both;
-	&.parallax-ready {
-		background-attachment: fixed;
-	}
-	&.parallax-disabled {
-		background-attachment: scroll !important;
-		background-position: 50% 50% !important;
-	}
+
 	blockquote {
 		border: 0;
 		padding: 0 10%;
@@ -32,6 +26,11 @@
 			position: relative;
 			#{$left}: -5px;
 		}
+	}
+
+	&.parallax-disabled {
+		background-attachment: scroll !important;
+		background-position: 50% 50% !important;
 	}
 }
 

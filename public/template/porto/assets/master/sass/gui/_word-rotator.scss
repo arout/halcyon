@@ -24,6 +24,8 @@
 			position: relative;
 			span {
 				display: inline-block;
+				float: $left;
+				clear: both;
 			}
 		}
 	}

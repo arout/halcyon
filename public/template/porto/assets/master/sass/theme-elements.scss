@@ -12,7 +12,9 @@ Version: 		@@version
 @import "gui/typography";
 @import "gui/navs";
 @import "gui/buttons";
+@import "gui/labels";
 @import "gui/forms";
+@import "gui/tables";
 @import "gui/icons";
 @import "gui/images";
 @import "gui/lists";
@@ -21,8 +23,10 @@ Version: 		@@version
 @import "gui/toggles";
 @import "gui/carousels";
 @import "gui/videos";
-@import "gui/popups";
+@import "gui/modals";
+@import "gui/lightbox";
 @import "gui/misc";
+@import "gui/dividers";
 @import "gui/sort";
 @import "gui/pricing-tables";
 @import "gui/featured-box";
@@ -31,10 +35,13 @@ Version: 		@@version
 @import "gui/testimonials";
 @import "gui/social-icons";
 @import "gui/arrows";
+@import "gui/call-to-action";
 @import "gui/bars";
 @import "gui/counters";
 @import "gui/word-rotator";
 @import "gui/scroll-top-top";
+@import "gui/flags";
+@import "gui/loading-overlay";
 
 // PARTIALS
 @import "partials/portfolio";

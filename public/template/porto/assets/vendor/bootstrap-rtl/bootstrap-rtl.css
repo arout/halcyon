@@ -1,9 +1,9 @@
 /*******************************************************************************
- *							bootstrap-rtl (version 3.3.1-rc1)
- *			Author: Morteza Ansarinia <ansarinia@me.com> (http://github.com/morteza)
- *	Created on: December 21,2014
+ *							bootstrap-rtl (version 3.3.4)
+ *			Author: Morteza Ansarinia (http://github.com/morteza)
+ *	Created on: August 13,2015
  *		 Project: bootstrap-rtl
- *	 Copyright: Unlicense.
+ *	 Copyright: Unlicensed Public Domain
  *******************************************************************************/
 
 html {
@@ -11,6 +11,12 @@ html {
 }
 body {
 	direction: rtl;
+}
+.flip.text-left {
+	text-align: right;
+}
+.flip.text-right {
+	text-align: left;
 }
 .list-unstyled {
 	padding-right: 0;
@@ -1043,8 +1049,8 @@ th {
 	border-top-left-radius: 0;
 }
 .input-group-addon:first-child {
-	border-right: 1px solid #cccccc;
 	border-left: 0px;
+	border-right: 1px solid;
 }
 .input-group .form-control:last-child,
 .input-group-addon:last-child,
@@ -1059,7 +1065,8 @@ th {
 	border-top-right-radius: 0;
 }
 .input-group-addon:last-child {
-	border-left: 1px solid #cccccc;
+	border-left-width: 1px;
+	border-left-style: solid;
 	border-right: 0px;
 }
 .input-group-btn > .btn + .btn {
@@ -1154,14 +1161,21 @@ th {
 	.navbar-nav > li {
 		float: right;
 	}
-	.navbar-nav.navbar-right:last-child {
+}
+@media (min-width: 768px) {
+	.navbar-left.flip {
+		float: right !important;
+	}
+	.navbar-right:last-child {
 		margin-left: -15px;
 		margin-right: auto;
 	}
-	.navbar-nav.navbar-right.flip {
+	.navbar-right.flip {
 		float: left !important;
+		margin-left: -15px;
+		margin-right: auto;
 	}
-	.navbar-nav.navbar-right .dropdown-menu {
+	.navbar-right .dropdown-menu {
 		left: 0;
 		right: auto;
 	}
@@ -1230,8 +1244,8 @@ th {
 }
 .alert-dismissable .close,
 .alert-dismissible .close {
-	right: 0;
-	left: 21px;
+	right: auto;
+	left: -21px;
 }
 .progress-bar {
 	float: right;
@@ -1355,6 +1369,9 @@ th {
 }
 .modal-footer {
 	text-align: left;
+}
+.modal-footer.flip {
+	text-align: right;
 }
 .modal-footer .btn + .btn {
 	margin-left: auto;

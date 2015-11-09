@@ -1,6 +1,6 @@
 <?php
 
-class WelcomeModel extends Fusion\System\SystemModel {
+class WelcomeModel extends Hal\Core\SystemModel {
 
     public $results;
 		
@@ -38,10 +38,7 @@ class WelcomeModel extends Fusion\System\SystemModel {
 
 		//a loop to pull out data
 		foreach($query->fetchAll() as $row)
-		{
-			// some code here
 			yield $row['citycode'].'<br>';
-		}
 	}
 	
 }

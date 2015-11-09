@@ -4,7 +4,7 @@
 	color: @textColor;
 	text-shadow: @textShadow;
 	.gradient(@primaryColor, @secondaryColor, @gradient);
-	border-color: @primaryColor;
+	border-color: @primaryColor @primaryColor darken(@primaryColor, 10%);
 }
 
 // Gradients
@@ -28,13 +28,22 @@
 	.gradientBar(@startColor, @endColor, @textColor, @textShadow);
 
 	&:hover {
-		border-color: lighten(@startColor, 5%);
+		border-color: lighten(@startColor, 5%) lighten(@startColor, 5%) darken(@startColor, 5%);
 		background-color: lighten(@startColor, 5%);
 	}
 
-	&:active, &:focus {
-		border-color: darken(@startColor, 5%);
+	&:active, &:focus, &:active:hover, &:active:focus {
+		border-color: darken(@startColor, 5%) darken(@startColor, 5%) darken(@startColor, 5%);
 		background-color: darken(@startColor, 5%);
+	}
+
+	&.dropdown-toggle {
+		border-left-color: darken(@startColor, 5%);
+	}
+
+	&[disabled] {
+		border-color: lighten(@startColor, 20%);
+		background-color: lighten(@startColor, 20%);
 	}
 }
 
@@ -42,13 +51,22 @@
 	.gradientBar(@startColor, @endColor, @textColor, @textShadow);
 
 	&:hover {
-		border-color: @endColor;
+		border-color: @endColor @endColor darken(@endColor, 10%);
 		background-color: lighten(@endColor, 5%);
 	}
 
-	&:active, &:focus {
-		border-color: darken(@startColor, 10%);
+	&:active, &:focus, &:active:hover, &:active:focus {
+		border-color: darken(@startColor, 10%) darken(@startColor, 10%) darken(@startColor, 20%);
 		background-color: darken(@startColor, 10%);
+	}
+
+	&.dropdown-toggle {
+		border-left-color: darken(@startColor, 5%);
+	}
+
+	&[disabled] {
+		border-color: lighten(@startColor, 20%);
+		background-color: lighten(@startColor, 20%);
 	}
 }
 

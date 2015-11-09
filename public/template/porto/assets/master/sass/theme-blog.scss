@@ -114,9 +114,11 @@ article {
 			width: auto;
 		}
 	}
+
 	&.post-medium .post-image .owl-carousel {
 		width: 100.2%;
 	}
+
 	&.post-large {
 		margin-#{$left}: 60px;
 		h2 {
@@ -306,7 +308,7 @@ ul.comments {
 	}
 }
 
-section.featured .recent-posts .date .day {
+section.section .recent-posts .date .day {
 	background: #FFF;
 }
 

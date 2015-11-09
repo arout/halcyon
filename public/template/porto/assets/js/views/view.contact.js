@@ -1,7 +1,7 @@
 /*
 Name: 			View - Contact
 Written by: 	Okler Themes - (http://www.okler.net)
-Version: 		3.6.0
+Version: 		4.4.0
 */
 
 (function($) {
@@ -98,6 +98,13 @@ Version: 		3.6.0
 			},
 			'radios': {
 				required: true
+			}
+		},
+		errorPlacement: function(error, element) {
+			if (element.attr('type') == 'radio' || element.attr('type') == 'checkbox') {
+				error.appendTo(element.parent().parent());
+			} else {
+				error.insertAfter(element);
 			}
 		}
 	});

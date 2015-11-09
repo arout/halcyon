@@ -18,20 +18,30 @@
 	}
 }
 
-/* Icons List */
-ul.icons {
-	list-style: none;
-	[class^="fa-"] {
-		margin-#{$right}: 5px;
-	}
-}
-
 /* Font Awesome List */
-.fontawesome-icon-list {
-	[class*="col-md-"] {
-    	margin-bottom: 9px;
-    }
-    > section {
-    	margin-top: 25px;
-    }
+.sample-icon-list {
+	margin-top: 22px;
+	.sample-icon a {
+		display: block;
+		color: #222222;
+		line-height: 32px;
+		height: 32px;
+		padding-left: 10px;
+		border-radius: 4px;
+		.fa, .icons {
+			width: 32px;
+			font-size: 14px;
+			display: inline-block;
+			text-align: $right;
+			margin-right: 10px;
+		}
+		&:hover {
+			color: #ffffff;
+			text-decoration: none;
+			.fa, .icons {
+				font-size: 28px;
+				vertical-align: -6px;
+			}
+		}
+	}
 }

@@ -1,6 +1,6 @@
 # Use PHP5.5 as default
 # AddHandler application/x-httpd-php55 .php
-php_flag session.auto_start 0
+# php_flag session.auto_start 0
 
 # ----------------------------------------------------------------------
 # Start rewrite engine
@@ -136,8 +136,6 @@ AddType text/x-vcard                   vcf
     SetEnvIfNoCase ^(Accept-EncodXng|X-cept-Encoding|X{15}|~{15}|-{15})$ ^((gzip|deflate)\s*,?\s*)+|[X~-]{4,13}$ HAVE_Accept-Encoding
     RequestHeader append Accept-Encoding "gzip,deflate" env=HAVE_Accept-Encoding
   </IfModule>
-</IfModule>
-
 </IfModule>
 
 <IfModule mod_gzip.c>

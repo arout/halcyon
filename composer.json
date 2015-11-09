@@ -7,10 +7,12 @@
         "php-console/php-console": "~3.1"
     },
     "autoload": {
-		"psr-4": {
-            "Fusion\\System\\": "vendor/Fusion/System",
-            "Fusion\\Config\\": "vendor/Fusion/Config",
-            "Fusion\\Toolbox\\": "vendor/Fusion/Toolbox"
-		}
-	}
+        "psr-4": {
+            "Hal\\Core\\": "app/code/core/system",
+            "Hal\\Config\\": "app/code/core/config",
+            "Hal\\Toolbox\\": "app/code/core/toolbox",
+            "Hal\\Extensions\\": "app/code/extensions",
+            "Hal\\Exception\\": "vendor/raveren/kint"
+        }
+    }
 }

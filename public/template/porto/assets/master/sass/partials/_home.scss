@@ -1,9 +1,26 @@
-/* Map */
-.map-section {
-	background: transparent url(../img/map-top.png) center 0 no-repeat;
-	padding-top: 220px;
-	margin-top: 40px;
+/* Custom Map */
+section.section-custom-map {
+	background: transparent url(../img/map.png) center 0 no-repeat;
+	padding: 129px 0 0;
+	margin: $spacement-lg 0 0;
+	border: 0;
+	section.section {
+		border-top-color: rgba(#F1F1F1, 0.8);
+		background: rgba(#F4F4F4, 0.8);
+	}
 }
+
+section.section-custom-map-2 {
+	background: transparent url(../img/map-2.png) center 0 no-repeat;
+	padding: 129px 0 0;
+	margin: 50px 0 0;
+	border: 0;
+	section.section {
+		border-top-color: rgba(#F1F1F1, 0.8);
+		background: rgba(#F4F4F4, 0.8);
+	}
+}
+
 
 /* Home Intro */
 .home-intro {
@@ -27,7 +44,7 @@
 			padding-top: 5px;
 		}
 		em {
-			font-family: $font-secundary;
+			font-family: $font-secondary;
 			font-size: 1.6em;
 		}
 	}
@@ -49,7 +66,7 @@
 			color: #FFF;
 		}
 		a:not(.btn) {
-			color: $color-default;
+			color: $color-font-default;
 		}
 	}
 	.learn-more {
@@ -57,11 +74,11 @@
 	}
 	&.light {
 		background-color: #E2E2E2;
-		&.secundary {
+		&.secondary {
 			background-color: #E0E1E4;
 		}
 		p {
-			color: $color-default;
+			color: $color-font-default;
 		}
 	}
 }
@@ -98,7 +115,7 @@
 	overflow: hidden;
 	strong {
 		display: block;
-		font-family: $font-secundary;
+		font-family: $font-secondary;
 		font-size: 2.1em;
 		font-weight: normal;
 		position: relative;
@@ -110,7 +127,6 @@
 	.process-image {
 		background: transparent url(../img/home-concept-item.png) no-repeat 0 0;
 		width: 160px;
-		height: 175px;
 		margin: 135px auto 0 auto;
 		padding-bottom: 50px;
 		position: relative;
@@ -118,6 +134,10 @@
 		img {
 			border-radius: 150px;
 			margin: 7px 8px;
+			width: auto;
+			height: auto;
+			max-width: 145px;
+			max-height: 145px;
 		}
 	}
 	.our-work {
@@ -127,7 +147,6 @@
 	.project-image {
 		background: transparent url(../img/home-concept-item.png) no-repeat 100% 0;
 		width: 350px;
-		height: 420px;
 		margin: side-values(15px 0 0 -30px);
 		padding-bottom: 45px;
 		position: relative;
@@ -159,10 +178,11 @@
 	.home-concept {
 		background: none;
 		.project-image {
-			margin: 60px auto 0 auto;
+			margin: 20px auto 0 auto;
 		}
 		.process-image {
-			margin-top: 60px;
+			margin-top: 0;
+			padding-bottom: 25px;
 		}
 	}
 
@@ -175,11 +195,10 @@
 			background-position: 0 0;
 			margin-#{$left}: auto;
 			max-width: 160px;
-			max-height: 220px;
 		}
 		.fc-slideshow {
-			max-height: 145px;
 			max-width: 145px;
+			height: 145px;
 			img {
 				max-height: 145px;
 				max-width: 145px;

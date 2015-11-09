@@ -1,7 +1,7 @@
 /* Tabs */
 .tabs {
     border-radius: corner-values(4px);
-    margin-bottom: 35px;
+	margin-bottom: $spacement-lg;
 }
 
 .nav-tabs {
@@ -82,8 +82,9 @@
 
 /* Bottom Tabs */
 .tabs.tabs-bottom {
-	margin: 0;
+	margin: 0 0 $spacement-lg 0;
 	padding: 0;
+
 	.tab-content {
 		border-radius: corner-values(4px 4px 0 0);
 		border-bottom: 0;
@@ -376,6 +377,85 @@
 				}
 			}
 		}
+	}
+}
+
+/* Center */
+.tabs-center {
+	.nav-tabs {
+		margin: 0 auto;
+		text-align: center;
+	}
+}
+
+/* Navigation */
+.tabs-navigation {
+	border-radius: 5px;
+	.nav-tabs {
+		> li {
+			margin-bottom: 1px;
+			a {
+				color: #777;
+				padding: 18px;
+				line-height: 100%;
+				&:before {
+					font-family: FontAwesome;
+					content: "\f054";
+					position: absolute;
+					#{$right}: 15px;
+					top: 50%;
+					margin-top: -7px;
+				}
+				.fa, .icons {
+					margin-#{$right}: 4px;
+				}
+			}
+		}
+		> li:first-child a {
+			border-radius: corner-values(5px 5px 0 0);
+		}
+		> li.active a {
+			&, &:hover, &:focus {
+				border-right-color: #eee;
+			}
+		}
+		> li:last-child a {
+			border-radius: corner-values(0 0 5px 5px);
+		}
+	}
+}
+
+.tab-pane-navigation {
+	display: none;
+	&.active {
+		display: block;
+	}
+}
+
+/* Simple */
+.tabs.tabs-simple {
+	.nav-tabs {
+		border: 0;
+		margin-bottom: 10px;
+		> li {
+			margin-left: 0;
+			margin-bottom: $spacement-lg;
+			a, a:hover, a:focus {
+				padding: 15px 30px;
+				background: none;
+				border: 0;
+				border-bottom: 3px solid #eee;
+				border-radius: 0;
+				color: #777;
+				font-size: 16px;
+			}
+		}
+	}
+	.tab-content {
+		border: 0;
+		padding: 0;
+		margin: 0;
+		box-shadow: none;
 	}
 }
 

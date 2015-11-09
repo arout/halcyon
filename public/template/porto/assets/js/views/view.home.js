@@ -1,7 +1,7 @@
 /*
 Name: 			View - Home
 Written by: 	Okler Themes - (http://www.okler.net)
-Version: 		3.6.0
+Version: 		4.4.0
 */
 
 (function($) {

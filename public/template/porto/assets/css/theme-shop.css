@@ -1,7 +1,7 @@
 /*
 Name: 			theme-shop.css
 Written by: 	Okler Themes - (http://www.okler.net)
-Version: 		3.6.0
+Version: 		4.4.0
 */
 /* Custom Font - Stars (From WooCommerce) */
 @font-face {
@@ -11,64 +11,6 @@ Version: 		3.6.0
 	font-weight: normal;
 	font-style: normal;
 }
-/* Shop - Mega Menu (Cart) */
-#header nav.mega-menu .mega-menu-shop {
-	margin-right: -20px;
-	padding-left: 0;
-	margin-left: 0;
-}
-
-#header nav.mega-menu .mega-menu-shop a {
-	color: #444;
-}
-
-#header nav.mega-menu .mega-menu-shop table {
-	width: 100%;
-	margin-top: 0px;
-}
-
-#header nav.mega-menu .mega-menu-shop .dropdown-menu {
-	width: 40%;
-	right: 8px;
-	border-radius: 6px 0 6px 6px;
-}
-
-#header nav.mega-menu .mega-menu-shop .dropdown-menu li table tr td a {
-	background-color: transparent !important;
-	color: #333;
-	padding: 0;
-	margin: 0;
-	display: block;
-}
-
-#header nav.mega-menu .mega-menu-shop .dropdown-menu li table tr td a.remove {
-	float: right;
-}
-
-#header nav.mega-menu .mega-menu-shop .dropdown-menu li table tr td a:hover {
-	text-decoration: none;
-}
-
-#header nav.mega-menu .mega-menu-shop .fa-shopping-cart {
-	margin-right: 5px;
-}
-
-#header nav.mega-menu .mega-menu-shop .product-thumbnail {
-	width: 120px;
-}
-
-#header nav.mega-menu .mega-menu-shop .product-actions {
-	text-align: right;
-	width: 80px;
-}
-
-#header nav.mega-menu .mega-menu-shop .actions-continue {
-	margin-top: 10px;
-	padding-top: 20px;
-	border-top: 1px solid #DDD;
-	clear: both;
-}
-
 /* Shop - Base */
 .shop {
 	margin-top: -10px;
@@ -111,12 +53,11 @@ Version: 		3.6.0
 	color: #FFF;
 	background: #222;
 	z-index: 1;
-	filter: alpha(opacity=0);
 	opacity: 0;
 	-webkit-transform: translate3d(0, 0, 0);
 }
 
-.shop ul.products .product .add-to-cart-product .fa {
+.shop ul.products .product .add-to-cart-product .fa, .shop ul.products .product .add-to-cart-product .icons {
 	margin-right: 3px;
 	font-size: 1.1em;
 }
@@ -247,7 +188,6 @@ Version: 		3.6.0
 	background: #333;
 	width: 100%;
 	height: 100%;
-	filter: alpha(opacity=0);
 	opacity: 0;
 	border-radius: 6px 6px 0 0;
 }
@@ -288,7 +228,6 @@ Version: 		3.6.0
 	-moz-transition: all 0.2s ease 0s;
 	transition: all 0.2s ease 0s;
 	left: 0%;
-	filter: alpha(opacity=0);
 	opacity: 0;
 }
 
@@ -304,7 +243,6 @@ Version: 		3.6.0
 	transition: all 0.2s ease 0s;
 	right: 0%;
 	font-weight: 600;
-	filter: alpha(opacity=0);
 	opacity: 0;
 }
 
@@ -368,59 +306,56 @@ Version: 		3.6.0
 	font-size: 0.9em;
 }
 
-.product-info.secundary .product-info-content {
+.product-info.secondary .product-info-content {
 	text-align: center;
 }
 
-.product-info.secundary .product-info-content h4 {
+.product-info.secondary .product-info-content h4 {
 	-webkit-transition: all 0.2s;
 	-moz-transition: all 0.2s;
 	transition: all 0.2s;
 	color: #FFF;
 	position: relative;
 	top: -25%;
-	filter: alpha(opacity=0);
 	opacity: 0;
 }
 
-.product-info.secundary .product-info-content .date {
+.product-info.secondary .product-info-content .date {
 	-webkit-transition: all 0.2s;
 	-moz-transition: all 0.2s;
 	transition: all 0.2s;
 	position: relative;
 	top: 25%;
 	display: block;
-	filter: alpha(opacity=0);
 	opacity: 0;
 }
 
-.product-info.secundary .product-info-act {
+.product-info.secondary .product-info-act {
 	top: 30%;
 }
 
-.product-info.secundary .label {
+.product-info.secondary .label {
 	-webkit-transition: all 0.2s;
 	-moz-transition: all 0.2s;
 	transition: all 0.2s;
 	clear: both;
 	display: inline-block;
 	margin-top: 15px;
-	filter: alpha(opacity=0);
 	opacity: 0;
 }
 
-.product-info.secundary:hover .label {
+.product-info.secondary:hover .label {
 	filter: alpha(opacity=100);
 	opacity: 1;
 }
 
-.product-info.secundary:hover .product-info-content h4 {
+.product-info.secondary:hover .product-info-content h4 {
 	top: 0;
 	filter: alpha(opacity=100);
 	opacity: 1;
 }
 
-.product-info.secundary:hover .product-info-content .date {
+.product-info.secondary:hover .product-info-content .date {
 	top: 0;
 	filter: alpha(opacity=100);
 	opacity: 1;
@@ -743,7 +678,6 @@ Version: 		3.6.0
 	background: #171717;
 	width: 100%;
 	height: 100%;
-	filter: alpha(opacity=0);
 	opacity: 0;
 	border-radius: 6px 6px 0 0;
 }
@@ -760,7 +694,6 @@ Version: 		3.6.0
 	right: 0;
 	text-align: center;
 	color: #FFF;
-	filter: alpha(opacity=0);
 	opacity: 0;
 }
 
@@ -824,7 +757,7 @@ Version: 		3.6.0
 		color: #FFF;
 	}
 
-	#header nav.mega-menu .mega-menu-shop a .fa-angle-down {
+	#header nav.mega-menu .mega-menu-shop a .fa-caret-down {
 		display: none !important;
 	}
 

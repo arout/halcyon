@@ -1,11 +1,10 @@
 <?php
 namespace Fusion\Unit;
 
-class Unit_Controller extends \Fusion\System\UnitController {
+class Unit_Controller extends \Hal\Core\UnitController {
 
-    public function index()
-    {
-        $this->view('welcome/index', $data = NULL);
-    }
+	public function index() {
+		$this->view('welcome/index', $data = NULL);
+	}
 
 }

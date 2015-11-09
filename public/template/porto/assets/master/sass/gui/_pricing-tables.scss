@@ -12,20 +12,30 @@
 	li {
 		border-top: 1px solid #ddd;
 		padding: 10px 0;
+		color: #777;
 	}
 	h3 {
 		background-color: #eee;
 		border-radius: corner-values(2px 2px 0 0);
-		font-size: 20px;
+		font-size: 1.3em;
 		font-weight: normal;
 		margin: -20px -20px 50px -20px;
 		padding: 20px;
+		.desc {
+			font-size: 0.7em;
+			margin-bottom: 0;
+			padding-bottom: 0;
+			color: #777;
+			font-style: normal;
+			text-transform: none;
+			display: block;
+		}
 		span {
 			background: #FFF;
 			border: 5px solid #FFF;
 			border-radius: 100px;
 			box-shadow: 0 5px 20px #ddd inset, 0 3px 0 #999 inset;
-			color: $color-default;
+			color: $color-font-default;
 			display: block;
 			font: bold 25px / 100px Georgia, Serif;
 			height: 100px;
@@ -40,6 +50,9 @@
 		top: -10px;
 		z-index: 2;
 		h3 {
+			.desc {
+				color: #FFF;
+			}
 			background-color: #666;
 			color: #FFF;
 			padding-top: 30px;
@@ -50,7 +63,7 @@
 		height: 88px;
 		overflow: hidden;
 		position: absolute;
-		#{$right}: -5px;
+		#{$right}: -3px;
 		top: -5px;
 		width: 85px;
 	}
@@ -108,6 +121,86 @@
 	}
 	.btn {
 		margin-top: 5px;
+	}
+
+	&.pricing-table-sm {
+		h3 {
+			.desc {
+				font-size: 0.7em;
+			}
+			span {
+				border: 3px solid #FFF;
+				box-shadow: 0 5px 20px #ddd inset, 0 3px 0 #999 inset;
+				font: bold 19px/65px Georgia,serif;
+				height: 70px;
+				margin: 10px auto -65px;
+				width: 70px;
+			}
+		}
+		.most-popular {
+			padding-bottom: 30px;
+		}
+	}
+
+	&.princig-table-flat {
+		.plan {
+			padding-left: 0;
+			padding-right: 0;
+			margin: -1px;
+			h3 {
+				padding-left: 0;
+				padding-right: 0;
+				margin: -20px 0 0;
+				.desc {
+					color: #FFF;
+				}
+				background-color: #666;
+				color: #FFF;
+				padding-top: 30px;
+				text-shadow: 0 1px #555;
+				span {
+					border-radius: 0;
+					border: 0;
+					background: #666;
+					color: #FFF;
+					font-family: $font-primary;
+					font-size: 600;
+					box-shadow: none;
+					width: 100%;
+					font-size: 1.5em;
+					height: auto;
+					line-height: 38px;
+					margin: 0;
+				}
+			}
+			ul {
+				margin-top: 0;
+				margin-bottom: -15px;
+				li {
+					padding: 8px 0;
+				}
+			}
+			&.most-popular {
+				ul {
+					li {
+						padding: 10px 0;
+					}
+				}
+			}
+		}
+	}
+
+	&.spaced {
+		[class*="col-md-"] {
+			padding-#{$left}: 2px;
+			padding-#{$right}: 2px;
+		}
+	}
+
+	&.no-borders {
+		.plan {
+			border: 0 !important;
+		}
 	}
 }
 

@@ -1,6 +1,6 @@
 <?php
 
-class MemberModel extends Fusion\System\SystemModel {
+class MemberModel extends Hal\Core\SystemModel {
 
 	public function select() {
 

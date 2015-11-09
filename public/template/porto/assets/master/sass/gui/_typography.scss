@@ -1,11 +1,20 @@
 /* Blockquote */
 blockquote {
 	font-size: 1em;
+	&.with-borders {
+		border-radius: 6px;
+		border-top: 1px solid #DFDFDF;
+		border-bottom: 1px solid #DFDFDF;
+		border-#{$left}: 1px solid #ECECEC;
+		border-#{$right}: 1px solid #ECECEC;
+		box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.04);
+		padding: 15px 20px;
+	}
 }
 
 /* Paragraphs */
 p {
-	color: $color-default;
+	color: $color-font-default;
 	line-height: 24px;
 	margin: 0 0 20px;
 	&.featured {
@@ -30,20 +39,9 @@ p {
 	}
 }
 
+/* Links */
 a, a:hover, a:focus {
 	color: #CCC;
-}
-
-/* Labels */
-.label-primary {
-	background-color: #CCC;
-}
-
-.label-dark,
-.label-dark:hover {
-	background: #111;
-	text-decoration: none;
-	font-weight: normal;
 }
 
 /* Drop Caps */
@@ -57,7 +55,8 @@ p.drop-caps {
 		margin-top: 5px;
 		font-family: Georgia;
 	}
-	&.secundary:first-child:first-letter {
+
+	&.drop-caps-style-2:first-child:first-letter {
 		background-color: #CCC;
 		color: #FFF;
 		padding: 6px;
@@ -69,6 +68,6 @@ p.drop-caps {
 /* Alternative Font Style */
 .alternative-font {
 	color: #CCC;
-	font-family: $font-secundary;
+	font-family: $font-secondary;
 	font-size: 1.6em;
 }

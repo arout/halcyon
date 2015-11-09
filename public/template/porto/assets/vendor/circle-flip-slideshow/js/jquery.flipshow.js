@@ -262,6 +262,10 @@
 				$overlayLight = $( '<div class="fc-overlay-light"></div>' ),
 				$overlayDark = $( '<div class="fc-overlay-dark"></div>' );
 
+			if(typeof this.$flipEl == 'undefined') {
+				return;
+			}
+
 			this.$flipEl.css( 'transition', this.transitionProperties );
 
 			this.$flipFront.find( 'div.fc-overlay-light, div.fc-overlay-dark' ).remove();

@@ -6,7 +6,10 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Fusion\\Toolbox\\' => array($vendorDir . '/Fusion/Toolbox'),
-    'Fusion\\System\\' => array($vendorDir . '/Fusion/System'),
-    'Fusion\\Config\\' => array($vendorDir . '/Fusion/Config'),
+    'Monolog\\' => array($vendorDir . '/monolog/monolog/src/Monolog'),
+    'Hal\\Toolbox\\' => array($baseDir . '/app/code/core/toolbox'),
+    'Hal\\Extensions\\' => array($baseDir . '/app/code/extensions'),
+    'Hal\\Exception\\' => array($vendorDir . '/raveren/kint'),
+    'Hal\\Core\\' => array($baseDir . '/app/code/core/system'),
+    'Hal\\Config\\' => array($baseDir . '/app/code/core/config'),
 );

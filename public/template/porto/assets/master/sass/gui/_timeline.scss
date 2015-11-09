@@ -1,7 +1,7 @@
 /* Timeline */
 section.timeline {
 	width: 75%;
-	margin: 50px 13% 0;
+	margin: 50px 12.5% 0;
 	position: relative;
 	float: $left;
 	padding-bottom: 120px;
@@ -152,20 +152,6 @@ section.timeline {
 				width: 14px;
 				z-index: 0;
 			}
-		}
-		.img-thumbnail {
-			border-radius: 0;
-			padding: 0;
-			border: 0;
-			img {
-				border-radius: 0;
-				padding: 0;
-				border: 0;
-			}
-		}
-		.thumb-info {
-			float: $left;
-			margin-bottom: -5px;
 		}
 		.owl-carousel {
 			border-radius: 0;
