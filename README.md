@@ -15,8 +15,13 @@ With that said, HALCYON FRAMEWORK has several goals in mind. We think that a fra
 HALCYON FRAMEWORK is developed and maintained by Andrew Rout (http://andrewrout.com).
 
 #### FEATURE REQUESTS / BUG REPORTS ####
+<<<<<<< HEAD
 Please report any bugs to support@kwfusion.com.
 Feature requests may be submitted directly to Andrew at arout@kwfusion.com.
+=======
+Please report any bugs to support@halcyonframework.com.
+Feature requests may be submitted directly to Andrew at arout@halcyonframework.com.
+>>>>>>> origin/HEAD
 
 #### CONTRIBUTE TO HALCYON FRAMEWORK ####
 Code contributions are greatly appreciated. Specifically, graphic design and general user interface improvements would be of particular interest. Submit your code as a zipped archive, and <a href="mailto:arout@halcyonframework.com">email Andrew</a>. Your code will be reviewed for compatibility and general quality (please note that no code with error suppression will be approved), and if accepted, your name and link (optional) will be included in the credits.
@@ -29,4 +34,7 @@ Monetary donations are welcomed. Development, hosting and distribution costs mon
 - Apache 2+ web server
 - mod_rewrite enabled on Apache
 - PDO-compatible database
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/HEAD
