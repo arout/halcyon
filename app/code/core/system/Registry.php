@@ -16,12 +16,31 @@ abstract class Registry {
 		return static::$registry[$name] = $resolve;
 	}
 
+	/**
+	 * Determine whether the id is registered
+	 * @param  string $name The id
+	 * @return bool Whether to id exists or not
+	 */
+	public static function registered($name) {
+
+		return array_key_exists($name, static::$registry);
+	}
+
+	/**
+	 * Remove registered component
+	 */
+	public static function delete($name) {
+
+		if (static::registerd($name)) {
+			unset(static::$registry[$name]);
+		}
+	}
+
 	/*
 	 * Create the instance
 	 * @param  string $name The id
 	 * @return mixed
 	 */
-
 	public static function run($name) {
 
 		if (static::registered($name)) {
@@ -31,16 +50,6 @@ abstract class Registry {
 		}
 
 		throw new Exception($name . ' not found');
-	}
-
-	/**
-	 * Determine whether the id is registered
-	 * @param  string $name The id
-	 * @return bool Whether to id exists or not
-	 */
-	public static function registered($name) {
-
-		return array_key_exists($name, static::$registry);
 	}
 
 }

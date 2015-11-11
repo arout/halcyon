@@ -76,6 +76,11 @@ $app['breadcrumbs'] = function ($c) {
 	return $bc;
 };
 
+$app['cookie'] = function ($c) {
+	\Hal\Core\Registry::register('toolbox/cookie', 'toolbox/cookie');
+	return new \Hal\Core\Cookie;
+};
+
 $app['email'] = function ($c) {
 	\Hal\Core\Registry::register('toolbox/email', 'toolbox/email');
 	return new \Hal\Extensions\Email;

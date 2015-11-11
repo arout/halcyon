@@ -12,7 +12,7 @@ class Config {
 
 		# Database Connection
 		$this->setting['db_host'] = "localhost";
-		$this->setting['db_name'] = "db_name";
+		$this->setting['db_name'] = "database";
 		$this->setting['db_user'] = "db_username";
 		$this->setting['db_pass'] = "db_password";
 
@@ -27,19 +27,19 @@ class Config {
 		$this->setting['site_slogan'] = 'MVC Framework for PHP 5.5+';
 
 		# Customer service or support email address
-		$this->setting['site_email'] = 'support@yoursite.com';
+		$this->setting['site_email'] = 'arout@kwfusion.com';
 
 		# Site admin name
 		$this->setting['site_admin'] = 'Customer Care';
 
 		# Address
-		$this->setting['street_address'] = '';
-		$this->setting['city']           = '';
-		$this->setting['state']          = '';
-		$this->setting['zipcode']        = '';
+		$this->setting['street_address'] = '8 N. Queen St., 9th Floor';
+		$this->setting['city']           = 'Lancaster';
+		$this->setting['state']          = 'Pa';
+		$this->setting['zipcode']        = '17331';
 
 		# Phone
-		$this->setting['telephone'] = '';
+		$this->setting['telephone'] = '(717) 316-9385';
 
 		# Name of the directory storing template files ( css/js/img, etc. )
 		$this->setting['template_name'] = 'dealership';
@@ -125,7 +125,7 @@ class Config {
 		$this->setting['BASE_PATH'] = BASE_PATH;
 
 		# Location of the system directory
-		$this->setting['system_folder'] = $this->setting['BASE_PATH'] . 'app/code/core/system/';
+		$this->setting['system_folder'] = $this->setting['BASE_PATH'] . 'vendor/Fusion/System/';
 
 		# Location of the public directory
 		$this->setting['public_folder'] = $this->setting['BASE_PATH'] . 'public/';
@@ -135,13 +135,6 @@ class Config {
 
 		# Template URL for fetching CSS / JS / IMG files
 		$this->setting['template_url'] = $this->setting['site_url'] . '/public/template/' . $this->setting['template_name'] . '/';
-
-		# Set active slider
-		if (!session_id()) {
-			session_start();
-		}
-
-		$this->setting['slider'] = $_SESSION['slider'];
 
 		# Convert image file size setting to kb
 		$this->setting['img_size']        = $this->setting['img_file_size'] * 1024;

@@ -1010,3 +1010,65 @@ Stack trace:
 [08-Nov-2015 21:55:54 America/New_York] PHP Notice:  Array to string conversion in /var/www/html/halcyon/public/template/dealership/header.php on line 78
 [08-Nov-2015 21:55:54 America/New_York] PHP Notice:  Array to string conversion in /var/www/html/halcyon/public/template/dealership/header.php on line 78
 [08-Nov-2015 21:55:54 America/New_York] PHP Notice:  Array to string conversion in /var/www/html/halcyon/public/template/dealership/header.php on line 78
+[10-Nov-2015 19:55:17 America/New_York] PHP Parse error:  syntax error, unexpected 'unset' (T_UNSET) in /var/www/html/halcyon/app/code/core/toolbox/Slider.php on line 28
+[10-Nov-2015 19:55:17 America/New_York] PHP Parse error:  syntax error, unexpected 'unset' (T_UNSET) in /var/www/html/halcyon/app/code/core/toolbox/Slider.php on line 28
+[10-Nov-2015 19:56:09 America/New_York] PHP Warning:  Missing argument 2 for Hal\Core\Registry::register(), called in /var/www/html/halcyon/app/code/core/toolbox/Slider.php on line 35 and defined in /var/www/html/halcyon/app/code/core/system/Registry.php on line 14
+[10-Nov-2015 19:56:09 America/New_York] PHP Notice:  Undefined variable: resolve in /var/www/html/halcyon/app/code/core/system/Registry.php on line 16
+[10-Nov-2015 19:56:09 America/New_York] PHP Warning:  Missing argument 2 for Hal\Core\Registry::register(), called in /var/www/html/halcyon/app/code/core/toolbox/Slider.php on line 35 and defined in /var/www/html/halcyon/app/code/core/system/Registry.php on line 14
+[10-Nov-2015 19:56:09 America/New_York] PHP Notice:  Undefined variable: resolve in /var/www/html/halcyon/app/code/core/system/Registry.php on line 16
+[10-Nov-2015 19:56:09 America/New_York] PHP Warning:  Missing argument 2 for Hal\Core\Registry::register(), called in /var/www/html/halcyon/app/code/core/toolbox/Slider.php on line 35 and defined in /var/www/html/halcyon/app/code/core/system/Registry.php on line 14
+[10-Nov-2015 19:56:09 America/New_York] PHP Notice:  Undefined variable: resolve in /var/www/html/halcyon/app/code/core/system/Registry.php on line 16
+[10-Nov-2015 19:56:09 America/New_York] PHP Warning:  Missing argument 2 for Hal\Core\Registry::register(), called in /var/www/html/halcyon/app/code/core/toolbox/Slider.php on line 35 and defined in /var/www/html/halcyon/app/code/core/system/Registry.php on line 14
+[10-Nov-2015 19:56:09 America/New_York] PHP Notice:  Undefined variable: resolve in /var/www/html/halcyon/app/code/core/system/Registry.php on line 16
+[10-Nov-2015 19:56:09 America/New_York] PHP Warning:  Missing argument 2 for Hal\Core\Registry::register(), called in /var/www/html/halcyon/app/code/core/toolbox/Slider.php on line 35 and defined in /var/www/html/halcyon/app/code/core/system/Registry.php on line 14
+[10-Nov-2015 19:56:09 America/New_York] PHP Notice:  Undefined variable: resolve in /var/www/html/halcyon/app/code/core/system/Registry.php on line 16
+[10-Nov-2015 19:56:09 America/New_York] PHP Warning:  Missing argument 2 for Hal\Core\Registry::register(), called in /var/www/html/halcyon/app/code/core/toolbox/Slider.php on line 35 and defined in /var/www/html/halcyon/app/code/core/system/Registry.php on line 14
+[10-Nov-2015 19:56:09 America/New_York] PHP Notice:  Undefined variable: resolve in /var/www/html/halcyon/app/code/core/system/Registry.php on line 16
+[10-Nov-2015 19:56:09 America/New_York] PHP Warning:  Missing argument 2 for Hal\Core\Registry::register(), called in /var/www/html/halcyon/app/code/core/toolbox/Slider.php on line 35 and defined in /var/www/html/halcyon/app/code/core/system/Registry.php on line 14
+[10-Nov-2015 19:56:09 America/New_York] PHP Notice:  Undefined variable: resolve in /var/www/html/halcyon/app/code/core/system/Registry.php on line 16
+[10-Nov-2015 19:56:09 America/New_York] PHP Warning:  Missing argument 2 for Hal\Core\Registry::register(), called in /var/www/html/halcyon/app/code/core/toolbox/Slider.php on line 35 and defined in /var/www/html/halcyon/app/code/core/system/Registry.php on line 14
+[10-Nov-2015 19:56:09 America/New_York] PHP Notice:  Undefined variable: resolve in /var/www/html/halcyon/app/code/core/system/Registry.php on line 16
+[10-Nov-2015 20:21:58 America/New_York] PHP Notice:  Undefined property: Hal\Core\Router::$controllername in /var/www/html/halcyon/app/code/core/toolbox/Slider.php on line 19
+[10-Nov-2015 20:21:58 America/New_York] PHP Notice:  Undefined property: Hal\Core\Router::$controllername in /var/www/html/halcyon/app/code/core/toolbox/Slider.php on line 19
+[10-Nov-2015 20:21:58 America/New_York] PHP Notice:  Undefined property: Hal\Core\Router::$controllername in /var/www/html/halcyon/app/code/core/toolbox/Slider.php on line 19
+[10-Nov-2015 20:21:58 America/New_York] PHP Notice:  Undefined property: Hal\Core\Router::$controllername in /var/www/html/halcyon/app/code/core/toolbox/Slider.php on line 19
+[10-Nov-2015 20:21:58 America/New_York] PHP Notice:  Undefined property: Hal\Core\Router::$controllername in /var/www/html/halcyon/app/code/core/toolbox/Slider.php on line 19
+[10-Nov-2015 20:21:58 America/New_York] PHP Notice:  Undefined property: Hal\Core\Router::$controllername in /var/www/html/halcyon/app/code/core/toolbox/Slider.php on line 19
+[10-Nov-2015 20:21:58 America/New_York] PHP Notice:  Undefined property: Hal\Core\Router::$controllername in /var/www/html/halcyon/app/code/core/toolbox/Slider.php on line 19
+[10-Nov-2015 20:22:18 America/New_York] PHP Notice:  Undefined property: Hal\Core\Router::$controllerclass in /var/www/html/halcyon/app/code/core/toolbox/Slider.php on line 19
+[10-Nov-2015 20:22:18 America/New_York] PHP Notice:  Undefined property: Hal\Core\Router::$controllerclass in /var/www/html/halcyon/app/code/core/toolbox/Slider.php on line 19
+[10-Nov-2015 20:22:18 America/New_York] PHP Notice:  Undefined property: Hal\Core\Router::$controllerclass in /var/www/html/halcyon/app/code/core/toolbox/Slider.php on line 19
+[10-Nov-2015 20:22:18 America/New_York] PHP Notice:  Undefined property: Hal\Core\Router::$controllerclass in /var/www/html/halcyon/app/code/core/toolbox/Slider.php on line 19
+[10-Nov-2015 20:22:18 America/New_York] PHP Notice:  Undefined property: Hal\Core\Router::$controllerclass in /var/www/html/halcyon/app/code/core/toolbox/Slider.php on line 19
+[10-Nov-2015 20:22:18 America/New_York] PHP Notice:  Undefined property: Hal\Core\Router::$controllerclass in /var/www/html/halcyon/app/code/core/toolbox/Slider.php on line 19
+[10-Nov-2015 20:22:18 America/New_York] PHP Notice:  Undefined property: Hal\Core\Router::$controllerclass in /var/www/html/halcyon/app/code/core/toolbox/Slider.php on line 19
+[10-Nov-2015 20:22:19 America/New_York] PHP Notice:  Undefined property: Hal\Core\Router::$controllerclass in /var/www/html/halcyon/app/code/core/toolbox/Slider.php on line 19
+[10-Nov-2015 20:22:20 America/New_York] PHP Notice:  Undefined property: Hal\Core\Router::$controllerclass in /var/www/html/halcyon/app/code/core/toolbox/Slider.php on line 19
+[10-Nov-2015 20:22:20 America/New_York] PHP Notice:  Undefined property: Hal\Core\Router::$controllerclass in /var/www/html/halcyon/app/code/core/toolbox/Slider.php on line 19
+[10-Nov-2015 20:22:20 America/New_York] PHP Notice:  Undefined property: Hal\Core\Router::$controllerclass in /var/www/html/halcyon/app/code/core/toolbox/Slider.php on line 19
+[10-Nov-2015 20:22:20 America/New_York] PHP Notice:  Undefined property: Hal\Core\Router::$controllerclass in /var/www/html/halcyon/app/code/core/toolbox/Slider.php on line 19
+[10-Nov-2015 20:22:20 America/New_York] PHP Notice:  Undefined property: Hal\Core\Router::$controllerclass in /var/www/html/halcyon/app/code/core/toolbox/Slider.php on line 19
+[10-Nov-2015 20:22:20 America/New_York] PHP Notice:  Undefined property: Hal\Core\Router::$controllerclass in /var/www/html/halcyon/app/code/core/toolbox/Slider.php on line 19
+[10-Nov-2015 20:23:53 America/New_York] PHP Notice:  Use of undefined constant DEBUG - assumed 'DEBUG' in /var/www/html/halcyon/public/views/errors/view.php on line 5
+[10-Nov-2015 20:23:53 America/New_York] PHP Notice:  Use of undefined constant DEBUG - assumed 'DEBUG' in /var/www/html/halcyon/public/views/errors/view.php on line 5
+[10-Nov-2015 20:23:53 America/New_York] PHP Notice:  Use of undefined constant DEBUG - assumed 'DEBUG' in /var/www/html/halcyon/public/views/errors/view.php on line 5
+[10-Nov-2015 20:23:53 America/New_York] PHP Notice:  Use of undefined constant DEBUG - assumed 'DEBUG' in /var/www/html/halcyon/public/views/errors/view.php on line 5
+[10-Nov-2015 20:23:53 America/New_York] PHP Notice:  Use of undefined constant DEBUG - assumed 'DEBUG' in /var/www/html/halcyon/public/views/errors/view.php on line 5
+[10-Nov-2015 20:23:53 America/New_York] PHP Notice:  Use of undefined constant DEBUG - assumed 'DEBUG' in /var/www/html/halcyon/public/views/errors/view.php on line 5
+[10-Nov-2015 20:23:53 America/New_York] PHP Notice:  Use of undefined constant DEBUG - assumed 'DEBUG' in /var/www/html/halcyon/public/views/errors/view.php on line 5
+[10-Nov-2015 20:23:59 America/New_York] PHP Notice:  Use of undefined constant DEBUG - assumed 'DEBUG' in /var/www/html/halcyon/public/views/errors/view.php on line 5
+[10-Nov-2015 20:24:00 America/New_York] PHP Notice:  Use of undefined constant DEBUG - assumed 'DEBUG' in /var/www/html/halcyon/public/views/errors/view.php on line 5
+[10-Nov-2015 20:24:00 America/New_York] PHP Notice:  Use of undefined constant DEBUG - assumed 'DEBUG' in /var/www/html/halcyon/public/views/errors/view.php on line 5
+[10-Nov-2015 20:24:00 America/New_York] PHP Notice:  Use of undefined constant DEBUG - assumed 'DEBUG' in /var/www/html/halcyon/public/views/errors/view.php on line 5
+[10-Nov-2015 20:24:00 America/New_York] PHP Notice:  Use of undefined constant DEBUG - assumed 'DEBUG' in /var/www/html/halcyon/public/views/errors/view.php on line 5
+[10-Nov-2015 20:24:00 America/New_York] PHP Notice:  Use of undefined constant DEBUG - assumed 'DEBUG' in /var/www/html/halcyon/public/views/errors/view.php on line 5
+[10-Nov-2015 20:24:00 America/New_York] PHP Notice:  Use of undefined constant DEBUG - assumed 'DEBUG' in /var/www/html/halcyon/public/views/errors/view.php on line 5
+[10-Nov-2015 20:24:23 America/New_York] PHP Notice:  Use of undefined constant DEBUG - assumed 'DEBUG' in /var/www/html/halcyon/public/views/errors/view.php on line 5
+[10-Nov-2015 20:27:17 America/New_York] PHP Fatal error:  Call to undefined method Hal\Toolbox\Slider::display() in /var/www/html/halcyon/public/controllers/Home_Controller.php on line 24
+[10-Nov-2015 20:27:29 America/New_York] PHP Fatal error:  Call to undefined method Hal\Toolbox\Slider::display() in /var/www/html/halcyon/public/controllers/Home_Controller.php on line 24
+[10-Nov-2015 20:27:29 America/New_York] PHP Fatal error:  Call to undefined method Hal\Toolbox\Slider::display() in /var/www/html/halcyon/public/controllers/Home_Controller.php on line 24
+[10-Nov-2015 20:27:29 America/New_York] PHP Fatal error:  Call to undefined method Hal\Toolbox\Slider::display() in /var/www/html/halcyon/public/controllers/Home_Controller.php on line 24
+[10-Nov-2015 20:27:32 America/New_York] PHP Fatal error:  Call to undefined method Hal\Toolbox\Slider::display() in /var/www/html/halcyon/public/controllers/Home_Controller.php on line 24
+[10-Nov-2015 20:32:27 America/New_York] PHP Fatal error:  Call to undefined method Hal\Toolbox\Slider::display() in /var/www/html/halcyon/public/controllers/Home_Controller.php on line 24
+[10-Nov-2015 20:32:27 America/New_York] PHP Fatal error:  Call to undefined method Hal\Toolbox\Slider::display() in /var/www/html/halcyon/public/controllers/Home_Controller.php on line 24
+[10-Nov-2015 20:32:27 America/New_York] PHP Fatal error:  Call to undefined method Hal\Toolbox\Slider::display() in /var/www/html/halcyon/public/controllers/Home_Controller.php on line 24

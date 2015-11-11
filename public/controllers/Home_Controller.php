@@ -20,9 +20,6 @@ class Home_Controller extends Hal\Core\SystemController {
 
 	public function index() {
 
-		// Show a slider
-		$this->toolbox('slider')->display('homepage');
-
 		echo '<h3>Order of services loaded</h3>';
 		foreach (\Hal\Core\Registry::$registry as $service) {
 			echo $service . '<br>';

@@ -5,44 +5,46 @@ class Slider {
 
 	// Loader
 	private $load;
-	private $session;
-	public $sliders = [];
+	public $slider;
+	public $route;
 
 	public function __construct($c) {
 
-		$this->load    = $c['load'];
-		$this->session = $c['session'];
-
+		$this->load  = $c['load'];
+		$this->route = $c['router'];
 	}
 
-	public function load() {
+	public function load($sliders) {
 
-		$slider = $this->session->get('slider');
-		return $this->load->view("sliders/$slider");
+		$controller = strtolower(str_replace('_Controller', '', $this->route->controller));
+		$action     = $this->route->action;
 
-	}
-
-	public function get() {
-
-		return $this->sliders;
-
-	}
-
-	public function destroy() {
-
-		if ($this->session->get('slider')) {
-			return $this->session->delete('slider');
+		foreach ($sliders as $page => $slider) {
+			# $page is the controller/action, $slider the slider to load
+			if ($page == $controller . '/' . $action) {
+				return $this->load->view("sliders/{$slider}");
+			}
 		}
 
 	}
 
-	public function display($slider) {
+	/*public function get() {
 
-		if ($this->session->verify('slider') === TRUE) {
-			$this->session->delete('slider');
-		}
+return $this->sliders;
 
-		return $this->session->set('slider', $slider);
+}
 
-	}
+public function destroy($slider) {
+
+\Hal\Core\Registry::delete($slider);
+
+}
+
+public function display($slider) {
+
+if (\Hal\Core\Registry::registered('slider') === FALSE) {
+\Hal\Core\Registry::register('slider', $slider);
+return $this->slider = $slider;
+}
+}*/
 }

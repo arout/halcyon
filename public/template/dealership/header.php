@@ -72,16 +72,27 @@
 <body>
 
 <?php
-if (!empty($this->config->setting('slider'))) {
-	$this->toolbox('slider')->load();
-	$this->toolbox('slider')->destroy();
-}
+/**
+ * This is where we set the sliders
+ *
+ * ==Format==
+ *
+ * 'controller/action'  =>  'filename-of-slider'
+ *
+ */
+$sliders = [
+	'home/index' => 'homepage',
+	'login'      => 'whyregister',
+];
+
+$this->toolbox('slider')->load($sliders);
+
 // Count unread messages
 //$data['count_messages'] = $this->toolbox('messenger')->count_unread();
 // Get unread mail
 //$data['unread_messages'] = $this->toolbox('messenger')->view_unread();
 
-if ($container['session']->get('email') === FALSE) {
+if ($app['session']->get('email') === FALSE) {
 	$this->load->view('../template/' . $this->config->setting['template_name'] . '/nav-visitor');
 } else {
 
@@ -95,9 +106,9 @@ if ($container['session']->get('email') === FALSE) {
 <section class="content">
     <div class="container">
         <div class="inner-page homepage margin-bottom-none">
-
+<!--
       <div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="true" data-auto-logout-link="false"></div>
-
+-->
         <!-- tinymce
         <script type="text/javascript" src="<?=TEMPLATE_URL;?>assets/js/tinymce/tinymce.min.js"></script>
         <script type="text/javascript" src="<?=TEMPLATE_URL;?>assets/js/tinymce/jquery.tinymce.min.js"></script>
