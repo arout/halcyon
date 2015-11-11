@@ -144,7 +144,7 @@ $app['performance'] = function ($c) {
 
 $app['sanitize'] = function ($c) {
 	\Hal\Core\Registry::register('toolbox/sanitize', 'toolbox/sanitize');
-	return new \Hal\Extensions\Sanitize($c['toolbox']);
+	return new \Hal\Toolbox\Sanitize($c['toolbox']);
 };
 
 $app['search'] = function ($c) {
@@ -165,8 +165,8 @@ $app['slider'] = function ($c) {
 $app['title'] = function ($c) {
 
 	\Hal\Core\Registry::register('toolbox/title', 'toolbox/title');
-	require_once EXTENSIONS_PATH . 'Titlesettings.php';
-	$title = new \Hal\Extensions\Title($c['toolbox']);
+	require_once TOOLBOX_PATH . 'Titlesettings.php';
+	$title = new \Hal\Toolbox\Title($c['toolbox']);
 	# Pass the Titlesettings() function from the included file above to $title->set()
 	$title->set(Titlesettings($c));
 	return $title;

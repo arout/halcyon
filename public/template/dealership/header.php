@@ -142,6 +142,4 @@ if ($app['session']->get('email') === FALSE) {
     </script>
     -->
 
-    <!-- CKEditor
-    <script type="text/javascript" src="<?=PLUGINS_URL;?>ckeditor/ckeditor.js"></script>
-        -->
+    <script type="text/javascript" src="<?=EXTENSIONS_URL;?>ckeditor/ckeditor.js"></script>

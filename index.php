@@ -10,7 +10,9 @@
  * @since           Version 1.0
  * @filesource
  *
- */
+ */error_reporting(E_ALL);
+ini_set('display_errors', 'On');
+ini_set('error_reporting', E_ALL);
 
 # Edit to match your time zone
 date_default_timezone_set('America/New_York');

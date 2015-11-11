@@ -12,9 +12,9 @@ class Config {
 
 		# Database Connection
 		$this->setting['db_host'] = "localhost";
-		$this->setting['db_name'] = "database";
-		$this->setting['db_user'] = "db_username";
-		$this->setting['db_pass'] = "db_password";
+		$this->setting['db_name'] = "framework";
+		$this->setting['db_user'] = "root";
+		$this->setting['db_pass'] = "";
 
 		# Define default controller
 		# Enter the file name of you controller, without the .php extension
