@@ -17,7 +17,7 @@ HALCYON FRAMEWORK is developed and maintained by Andrew Rout (http://andrewrout.
 #### FEATURE REQUESTS / BUG REPORTS ####
 <<<<<<< HEAD
 Please report any bugs to support@kwfusion.com.
-Feature requests may be submitted directly to Andrew at arout@kwfusion.com.
+Feature requests may be submitted directly to Andrew at arout@halcyonframework.com.
 =======
 Please report any bugs to support@halcyonframework.com.
 Feature requests may be submitted directly to Andrew at arout@halcyonframework.com.
