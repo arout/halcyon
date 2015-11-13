@@ -1,10 +1,11 @@
 <?php
+
 namespace Hal\Config;
 
 class Config {
 
-	public $setting = [];
-	protected $db;
+	public 	$setting = [];
+	protected 	$db;
 
 	public function __construct() {
 
@@ -12,9 +13,9 @@ class Config {
 
 		# Database Connection
 		$this->setting['db_host'] = "localhost";
-		$this->setting['db_name'] = "framework";
-		$this->setting['db_user'] = "root";
-		$this->setting['db_pass'] = "";
+		$this->setting['db_name'] = "database name";
+		$this->setting['db_user'] = "database username";
+		$this->setting['db_pass'] = "database password";
 
 		# Define default controller
 		# Enter the file name of you controller, without the .php extension
@@ -71,7 +72,7 @@ class Config {
 
 		/*----------------------------------------
 		 * Image gallery settings
-		---------------------------------------*/
+		 *---------------------------------------*/
 		$this->setting['total_img_allowed'] = 10;
 		# Maximum allowed image file size in kb ( 1024kb is equal to 1MB )
 		$this->setting['img_file_size'] = 1024;
@@ -84,7 +85,7 @@ class Config {
 
 		/*----------------------------------------
 		 * Global messenger inbox settings
-		---------------------------------------*/
+		 *---------------------------------------*/
 		# Enable the messenger system by setting this to true
 		$this->setting['inbox_enabled'] = TRUE;
 
@@ -112,7 +113,7 @@ class Config {
 
 		/*----------------------------------------
 		 * Global system settings
-		---------------------------------------*/
+		 *---------------------------------------*/
 		/**
 		 * Define site url here
 		 * If you will be using SSL, use relative URLs (i.e., //example.com instead of http://example.com)
@@ -143,12 +144,10 @@ class Config {
 		$this->setting['notify_img_size'] = number_format(round($size / pow(1024, ($i = floor(log($size, 1024)))), 2)) . ' ' . $unit[$i];
 
 		# Enable / disable Memcached helper
-		if (extension_loaded('memcached')) {
+		if (extension_loaded('memcached'))
 			$this->setting['memcached'] = TRUE;
-		} else {
-
+		else
 			$this->setting['memcached'] = FALSE;
-		}
 
 		# Measure script execution time
 		$this->setting['execution_time'] = (microtime(true) - $_SERVER["REQUEST_TIME_FLOAT"]);
