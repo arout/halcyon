@@ -21,7 +21,6 @@ class SystemController extends Application {
 	public $config;
 	protected $data;
 	public $session;
-	public $helper;
 	// Input sanitation class
 	public $input;
 	public $cache;
@@ -29,6 +28,8 @@ class SystemController extends Application {
 	public $load;
 	// System logger class
 	public $log;
+	// Helpers located in /app/code/helpers
+	public $helper;
 
 	public function __construct(\Pimple\Container $app) {
 
@@ -39,6 +40,7 @@ class SystemController extends Application {
 		$this->load    = $app['load'];
 		$this->toolbox = $app['toolbox'];
 		$this->log     = $app['log'];
+		$this->helper  = $app['helper'];
 		$this->session = self::session();
 		$this->input   = self::input();
 		$this->cache   = self::cache();

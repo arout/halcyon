@@ -12,6 +12,7 @@
             "Hal\\Config\\": "app/code/core/config",
             "Hal\\Toolbox\\": "app/code/core/toolbox",
             "Hal\\Extensions\\": "app/code/extensions",
+            "Hal\\Helper\\": "app/code/helpers",
             "Hal\\Exception\\": "vendor/raveren/kint"
         }
     }

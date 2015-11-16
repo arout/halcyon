@@ -20,10 +20,12 @@ class Home_Controller extends Hal\Core\SystemController {
 
 	public function index() {
 
-		echo '<h3>Order of services loaded</h3>';
-		foreach (\Hal\Core\Registry::$registry as $service) {
-			echo $service . '<br>';
-		}
+		// echo '<h3>Order of services loaded</h3>';
+		// foreach (\Hal\Core\Registry::$registry as $service) {
+		// 	echo $service . '<br>';
+		// }
+		$api = $this->helper->load('config');
+		echo $api->api_key;
 		$this->load->view('home/requirements');
 
 	}

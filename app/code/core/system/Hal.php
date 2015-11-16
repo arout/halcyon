@@ -65,6 +65,11 @@ $app['system_controller'] = function ($app) {
 	return new \Hal\Core\SystemController($app);
 };
 
+$app['helper'] = function ($c) {
+	\Hal\Core\Registry::register('system/helper', 'system/helper');
+	return new \Hal\Helper\Autoload($c);
+};
+
 /*********************
  *   Toolbox helpers
  *********************/

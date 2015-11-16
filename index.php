@@ -40,18 +40,6 @@ $app['session']->start();
 # Turn error reporting on / off
 $hal->set_reporting('on');
 
-# Fetch autoloader
-# require_once(SYSTEM_PATH.'Autoload.php');
-
-/*------------------------------------------------------------------------------------------
- * When adding your own files to autoload, append it to the end of array
- * Example:  autoload__application(  array( 'Filename_of_your_helper', 'another_custom_file' ) );
- * Please note that the below autoloaders do not implement lazy loading --
- * your files will be loaded into the application whether a script needs it or not
- * Uncomment below and insert your custom _application helpers to be loaded
-------------------------------------------------------------------------------------------*/
-# autoload__application( array( 'Email' ) );
-
 # Off we go
 if ($hal->config->setting('compression') === FALSE) {
 	ob_start();
@@ -61,7 +49,6 @@ if ($hal->config->setting('compression') === FALSE) {
 	//ini_set('zlib.output_compression_level', "-1");
 	ob_start();
 }
-
 # $hal['opcache']->configuration();
 # $hal['memcached']->set('test', 'test data');
 
