@@ -5,42 +5,53 @@ namespace Hal\Toolbox;
 ### $this->toolbox('email')->send( "andrewr@dynamicartisans.com", "Andrew Rout", "kW Fusion", "arout@kwfusion.com", "This is a test", "Holla!!!!" );
 
 class Email {
-	
-	public function send( $to, $recipient_name, $from, $reply_to, $subject, $message ) {	
-	
+
+	private $config;
+
+	public function __construct($c) {
+		$this->config = $c['config'];
+	}
+
+	public function send($to, $recipient_name, $from, $reply_to, $subject, $message) {
+
 		/**
 		 * $to is the email address of recipient; can be an array
 		 * $recipient_name is the name of recipient
 		 * $from is the company / website name
 		 * $reply_to is the reply to address
 		 */
-		 
+
 		// message
 		$formatted_message = '
 		<html>
 		<head>
-			 <title>'. $subject .'</title>
+			 <title>' . $subject . '</title>
 		</head>
-		<body>'. $this->logo_section() . $this->message_block( $message ) . $this->footer() .'
+		<body>' . $this->logo_section() . $this->message_block($message) . $this->footer_block() . '
 		</body>
 		</html>
 		';
 
 		// To send HTML mail, the Content-type header must be set
-		$headers  = 'MIME-Version: 1.0' . "\r\n";
+		$headers = 'MIME-Version: 1.0' . "\r\n";
 		$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-		
+
 		// Additional headers
-		$headers .= 'To: '. $recipient_name .' <'. $to .'>' . "\r\n";
-		$headers .= 'From: '. $from .' <'. $reply_to .'>' . "\r\n";
-		
+		$headers .= 'To: ' . $recipient_name . ' <' . $to . '>' . "\r\n";
+		$headers .= 'From: ' . $from . ' <' . $reply_to . '>' . "\r\n";
+
 		// Mail it
-		mail($to, $subject, $formatted_message, $headers);
+		if (mail($to, $subject, $formatted_message, $headers)) {
+			return;
+		} else {
+			echo 'There was a problem sending your message.';
+		}
+
 	}
-    
-    public function logo_section() {
-    
-        return '
+
+	public function logo_section() {
+
+		return '
             <body style="margin:0; margin-top:30px; margin-bottom:30px; padding:0; width:100%; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; background-color: #F4F5F7;">
 
 
@@ -60,9 +71,9 @@ class Email {
 											<tbody>
 
 												<tr><!-- logo -->
-													<td width="100%" style="font-family: helvetica, Arial, sans-serif; font-size: 18px; letter-spacing: 0px; text-align: center;">	
+													<td width="100%" style="font-family: helvetica, Arial, sans-serif; font-size: 18px; letter-spacing: 0px; text-align: center;">
 														<a href="#" style="text-decoration: none;">
-															<img src="'.TEMPLATE_URL.assets/images/logo.png.'" alt="" border="0" width="166" height="auto" style="with: 166px; height: auto; border: 5px solid #ffffff;">
+															<img src="' . TEMPLATE_URL . 'assets/images/logo.png." alt="" border="0" width="166" height="auto" style="with: 166px; height: auto; border: 5px solid #ffffff;">
 														</a>
 													</td>
 												</tr>
@@ -76,8 +87,8 @@ class Email {
 													<td width="100%" height="30"></td>
 												</tr>
 												<tr>
-													<td width="100%" style=" font-size: 14px; line-height: 24px; font-family:helvetica, Arial, sans-serif; text-align: left; color:#87919F;">	
-													'.$this->config->setting('site_slogan').'
+													<td width="100%" style=" font-size: 14px; line-height: 24px; font-family:helvetica, Arial, sans-serif; text-align: left; color:#87919F;">
+													' . $this->config->setting('site_slogan') . '
 													</td>
 												</tr>
 												<tr>
@@ -102,12 +113,12 @@ class Email {
 										</table>
 										<!-- /Space -->
         ';
-    
-    }
-    
-    public function message_block( $message ) {
-    
-        return '
+
+	}
+
+	public function message_block($message) {
+
+		return '
             <!-- /ROW TXT ONLY -->
 						<table cellpadding="0" cellspacing="0" border="0" width="560" style="border:0; border-collapse:collapse; background-color:#ffffff; border-radius:6px;">
 							<tbody>
@@ -120,7 +131,7 @@ class Email {
 													<td width="100%" height="20"></td>
 												</tr>
 												<tr><!-- title -->
-													<td width="100%" style="font-family: helvetica, Arial, sans-serif; font-size: 18px; letter-spacing: 0px; text-align: center; color:#F07057;">	
+													<td width="100%" style="font-family: helvetica, Arial, sans-serif; font-size: 18px; letter-spacing: 0px; text-align: center; color:#F07057;">
 														<strong>YOU</strong> ARE THE BEST
 													</td>
 												</tr>
@@ -128,7 +139,7 @@ class Email {
 													<td width="100%" height="30"></td>
 												</tr>
 												<tr>
-													<td width="100%" style="font-family:helvetica, Arial, sans-serif; font-size: 14px; text-align: left; color:#87919F; line-height: 24px;">'.$message.'
+													<td width="100%" style="font-family:helvetica, Arial, sans-serif; font-size: 14px; text-align: left; color:#87919F; line-height: 24px;">' . $message . '
 													</td>
 												</tr>
 												<tr><!-- spacing -->
@@ -141,12 +152,12 @@ class Email {
 															<tbody>
 																<tr>
 																	<td width="100%">
-																		
+
 
 																		<table width="260" border="0" cellpadding="0" cellspacing="0" align="right" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
 																			<tbody>
 																				<tr>
-																					<td width="100%" style="font-size: 15px; color:#2E363F; text-align: left; font-family: Helvetica, Arial, sans-serif; line-height: 24px; vertical-align: top; text-transform: uppercase; letter-spacing: 0px;">	
+																					<td width="100%" style="font-size: 15px; color:#2E363F; text-align: left; font-family: Helvetica, Arial, sans-serif; line-height: 24px; vertical-align: top; text-transform: uppercase; letter-spacing: 0px;">
 																						<strong>YES</strong> WE CAN
 																					</td>
 																				</tr>
@@ -154,19 +165,19 @@ class Email {
 																					<td width="100%" height="10"></td>
 																				</tr>
 																				<tr>
-																					<td width="260" style="font-family:helvetica, Arial, sans-serif; font-size: 14px; text-align: left; color:#87919F; line-height: 24px;">	
-																						Lorem ipsum dolor sit amet, consectetur adipis icing elit, sed do eiusmod tempor 
+																					<td width="260" style="font-family:helvetica, Arial, sans-serif; font-size: 14px; text-align: left; color:#87919F; line-height: 24px;">
+																						Lorem ipsum dolor sit amet, consectetur adipis icing elit, sed do eiusmod tempor
 																						incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
 																					</td>
 																				</tr>
 																			</tbody>
 																		</table>
-																		
+
 
 																		<table width="260" border="0" cellpadding="0" cellspacing="0" align="right" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
 																			<tbody>
 																				<tr>
-																					<td width="100%" style="font-size: 15px; color:#2E363F; text-align: left; font-family: Helvetica, Arial, sans-serif; line-height: 24px; vertical-align: top; text-transform: uppercase; letter-spacing: 0px;">	
+																					<td width="100%" style="font-size: 15px; color:#2E363F; text-align: left; font-family: Helvetica, Arial, sans-serif; line-height: 24px; vertical-align: top; text-transform: uppercase; letter-spacing: 0px;">
 																						<strong>YES</strong> YOU CAN
 																					</td>
 																				</tr>
@@ -174,14 +185,14 @@ class Email {
 																					<td width="100%" height="10"></td>
 																				</tr>
 																				<tr>
-																					<td width="260" style="font-family:helvetica, Arial, sans-serif; font-size: 14px; text-align: left; color:#87919F; line-height: 24px;">	
-																						Lorem ipsum dolor sit amet, consectetur adipis icing elit, sed do eiusmod tempor 
+																					<td width="260" style="font-family:helvetica, Arial, sans-serif; font-size: 14px; text-align: left; color:#87919F; line-height: 24px;">
+																						Lorem ipsum dolor sit amet, consectetur adipis icing elit, sed do eiusmod tempor
 																						incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
 																					</td>
 																				</tr>
 																			</tbody>
 																		</table>
-																		
+
 																	</td>
 																</tr>
 															</tbody>
@@ -200,12 +211,12 @@ class Email {
 						</table>
 						<!-- /ROW TXT ONLY -->
         ';
-    
-    }
-    
-    public function footer_block() {
-    
-        return '
+
+	}
+
+	public function footer_block() {
+
+		return '
             <!-- ROW FOOTER -->
 						<table cellpadding="0" cellspacing="0" border="0" width="560" style="border:0; border-collapse:collapse; background-color:#ffffff; border-radius:6px;">
 							<tbody>
@@ -246,7 +257,7 @@ class Email {
 																	<td width="225"></td>
 																</tr>
 															</tbody>
-														</table>							
+														</table>
 													</td>
 												</tr>
 												<tr>
@@ -259,8 +270,8 @@ class Email {
 										<table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
 											<tbody>
 												<tr><!-- copyright -->
-													<td width="100%" style="font-family: helvetica, Arial, sans-serif; font-size: 11px; text-align: center; line-height: 24px;">	
-														<center>Copyright &copy; 2014. All Rights Reserved.</center>  						
+													<td width="100%" style="font-family: helvetica, Arial, sans-serif; font-size: 11px; text-align: center; line-height: 24px;">
+														<center>Copyright &copy; 2014. All Rights Reserved.</center>
 													</td>
 												</tr>
 												<tr>
@@ -268,8 +279,8 @@ class Email {
 												</tr>
 												<tr><!-- subscribe / unsubscribe -->
 													<td width="100%" style="font-family:helvetica, Arial, sans-serif; font-size: 11px; text-align: center; color: rgb(119, 119, 119); line-height: 21px; font-style: italic;">
-														<a href="#" style="text-decoration: none; color: #F07057;">Subscribe</a> 
-														/ 
+														<a href="#" style="text-decoration: none; color: #F07057;">Subscribe</a>
+														/
 														<a href="#" style="text-decoration: none; color: #F07057;">Unsubscribe</a>
 													</td>
 												</tr>
@@ -290,5 +301,5 @@ class Email {
 			</tbody>
 		</table>
         ';
-    }
+	}
 }

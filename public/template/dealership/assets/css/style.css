@@ -2652,7 +2652,7 @@ input, select, textarea {
 
 input[type="text"], textarea, textarea[name="msg"], select, div.styled, input[type="file"], input[type="email"] {
 	float: left;
-	width: 108px;
+	width: 100%;
 	border-radius: 2px;
 	border: none;
 	color: #54545e;
@@ -2678,7 +2678,7 @@ textarea {
 
 input[type="text"], textarea, textarea[name="msg"], select, div.custom-select, input[type="file"], input[type="email"] {
 	float: left;
-	width: 108px;
+	width: 100%;
 	border-radius: 2px;
 	border: 1px solid #E4E4E4;
 	color: #54545e;
@@ -2770,7 +2770,7 @@ label:before {
 	content: '';
 	width: 25px;
 	height: 20px;
-	background-image: url(../images/formelements.png);
+	/* background-image: url(../images/formelements.png); */
 }
 
 input[type="checkbox"] + label:before {

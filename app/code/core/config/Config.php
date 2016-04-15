@@ -11,10 +11,10 @@ class Config {
 		//** Global website settings **//
 
 		# Database Connection
-		$this->setting['db_host'] = "localhost";
-		$this->setting['db_name'] = "db_name";
-		$this->setting['db_user'] = "db_user";
-		$this->setting['db_pass'] = "db_pass";
+		$this->setting['db_host'] = "localhost"; # Localhost is fine for most; change if necessary
+		$this->setting['db_name'] = "Database name";
+		$this->setting['db_user'] = "Database User";
+		$this->setting['db_pass'] = "Database Password";
 
 		# Define default controller
 		# Enter the file name of you controller, without the .php extension
@@ -34,9 +34,9 @@ class Config {
 
 		# Address
 		$this->setting['street_address'] = 'Street Address';
-		$this->setting['city']           = 'City';
-		$this->setting['state']          = 'State';
-		$this->setting['zipcode']        = 'Zip code';
+		$this->setting['city'] = 'City';
+		$this->setting['state'] = 'State';
+		$this->setting['zipcode'] = 'Zip code';
 
 		# Phone
 		$this->setting['telephone'] = '(555) 555-1212';
@@ -70,8 +70,8 @@ class Config {
 		$this->setting['login_math'] = TRUE;
 
 		/*----------------------------------------
-		 * Image gallery settings
-		---------------------------------------*/
+			 * Image gallery settings
+		*/
 		$this->setting['total_img_allowed'] = 10;
 		# Maximum allowed image file size in kb ( 1024kb is equal to 1MB )
 		$this->setting['img_file_size'] = 1024;
@@ -83,8 +83,8 @@ class Config {
 		$this->setting['img_type'] = ['jpg', 'jpeg', 'gif', 'png'];
 
 		/*----------------------------------------
-		 * Global messenger inbox settings
-		---------------------------------------*/
+			 * Global messenger inbox settings
+		*/
 		# Enable the messenger system by setting this to true
 		$this->setting['inbox_enabled'] = TRUE;
 
@@ -111,14 +111,14 @@ class Config {
 		################################################################
 
 		/*----------------------------------------
-		 * Global system settings
-		---------------------------------------*/
+			 * Global system settings
+		*/
 		/**
 		 * Define site url here
 		 * If you will be using SSL, use relative URLs (i.e., //example.com instead of http://example.com)
 		 * NO TRAILING SLASHES AT THE END OF THE URL
 		 */
-		$uri[]                     = explode('/', $_SERVER["REQUEST_URI"]);
+		$uri[] = explode('/', $_SERVER["REQUEST_URI"]);
 		$this->setting['site_url'] = '//' . $_SERVER["SERVER_NAME"] . '/' . $uri[0][1];
 
 		# Location of front controller
@@ -137,9 +137,9 @@ class Config {
 		$this->setting['template_url'] = $this->setting['site_url'] . '/public/template/' . $this->setting['template_name'] . '/';
 
 		# Convert image file size setting to kb
-		$this->setting['img_size']        = $this->setting['img_file_size'] * 1024;
-		$size                             = $this->setting['img_size'];
-		$unit                             = ['b', 'kb', 'mb', 'gb', 'tb', 'pb'];
+		$this->setting['img_size'] = $this->setting['img_file_size'] * 1024;
+		$size = $this->setting['img_size'];
+		$unit = ['b', 'kb', 'mb', 'gb', 'tb', 'pb'];
 		$this->setting['notify_img_size'] = number_format(round($size / pow(1024, ($i = floor(log($size, 1024)))), 2)) . ' ' . $unit[$i];
 
 		# Enable / disable Memcached helper

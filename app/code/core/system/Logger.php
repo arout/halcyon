@@ -10,7 +10,11 @@ class Logger {
 
 	public function __construct() {
 		ini_set('log_errors', 'On');
-		ini_set('error_log', LOG_PATH.'system.log');
+		ini_set('error_log', LOG_PATH . 'system.log');
+		if (!is_dir(LOG_PATH)) {
+			mkdir(LOG_PATH);
+		}
+
 	}
 
 	public function save($message = NULL, $logfile = 'system.log') {
@@ -19,23 +23,23 @@ class Logger {
 
 		if (!is_null($message)) {
 
-			chmod(LOG_PATH.$logfile, 0644);
+			chmod(LOG_PATH . $logfile, 0644);
 
 			if ($message instanceof Exception) {
 
-				$print_to_file = "EXCEPTION OCCURED\r\nDate\Time: ".date("Y-m-d H:i:s")."\r\n
-	            File name: $message->getFile()\r\nLine Number: $message->getLine()\nMessage: $message->getMessage()" .PHP_EOL;
+				$print_to_file = "EXCEPTION OCCURED\r\nDate\Time: " . date("Y-m-d H:i:s") . "\r\n
+	            File name: $message->getFile()\r\nLine Number: $message->getLine()\nMessage: $message->getMessage()" . PHP_EOL;
 
-				$open = fopen(LOG_PATH.$logfile, "ab");
+				$open = fopen(LOG_PATH . $logfile, "ab");
 				fwrite($open, $print_to_file);
 				fclose($open);
 
 				return true;
 			} else {
 
-				$print_to_file = "### Log Entry ###\r\nDate\Time: ".date("Y-m-d H:i:s")."\r\n$message\r\n" .PHP_EOL;
+				$print_to_file = "### Log Entry ###\r\nDate\Time: " . date("Y-m-d H:i:s") . "\r\n$message\r\n" . PHP_EOL;
 
-				$open = fopen(LOG_PATH.$logfile, "a+");
+				$open = fopen(LOG_PATH . $logfile, "a+");
 				fwrite($open, $print_to_file);
 				fclose($open);
 
@@ -43,10 +47,10 @@ class Logger {
 			}
 
 		} else {
-			$print_to_file = "### NOTICE ###\nDate\Time: ".date("Y-m-d H:i:s")."\n
-	            Cannot print a <null> message".PHP_EOL;
+			$print_to_file = "### NOTICE ###\nDate\Time: " . date("Y-m-d H:i:s") . "\n
+	            Cannot print a <null> message" . PHP_EOL;
 
-			$open = fopen(LOG_PATH.$logfile, "a+");
+			$open = fopen(LOG_PATH . $logfile, "a+");
 			fwrite($open, $print_to_file);
 			fclose($open);
 
@@ -65,16 +69,16 @@ class Logger {
 
 			if (filesize($_file) >= $max_size) {
 
-				$tar = new \PharData(basename($_file, ".log").'-error-log-archive.tar');
+				$tar = new \PharData(basename($_file, ".log") . '-error-log-archive.tar');
 				$tar->addFile($_file);
 				$tar->compress(\Phar::GZ);
 
 				# Move tarball to archives folder once complete
-				if (is_readable('archive/'.$_file.'-error-log-archive.tar')) {
-					rename($_file.'-error-log-archive.tar', 'archive/'.$_file.'-error-log-archive.tar');
+				if (is_readable('archive/' . $_file . '-error-log-archive.tar')) {
+					rename($_file . '-error-log-archive.tar', 'archive/' . $_file . '-error-log-archive.tar');
 				} else {
 
-					rename($_file.'-error-log-archive.tar', 'archive/'.$_file.'_'.time().'-error-log-archive.tar');
+					rename($_file . '-error-log-archive.tar', 'archive/' . $_file . '_' . time() . '-error-log-archive.tar');
 				}
 			}
 		}

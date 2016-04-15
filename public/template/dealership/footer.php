@@ -1,3 +1,4 @@
+        <p><br><br></p>
         <!-- Close main content -->
         </div>
     </div>
@@ -83,7 +84,7 @@
         </div>
     </div>
     <div class="footer-bar">
-        <div class="container text-center"> Script execution time: <code class="terminal"><?php echo $this->config->setting['execution_time'];?></code> seconds. Memory usage: <code class="terminal">
+        <div class="container text-center"> Script execution time: <code class="terminal"><?php echo $this->config->setting['execution_time']; ?></code> seconds. Memory usage: <code class="terminal">
             <?php
 function convert($size) {
 
@@ -171,7 +172,7 @@ $.ajax(
     {
         url: "<?=BASEURL;?>public/plugins/ajax/messenger/update_unread_count.php",
         type: "post",
-        data: {rid:"<?php echo $this->toolbox('session')->get('member_id');?>"},
+        data: {rid:"<?php echo $this->toolbox('session')->get('member_id'); ?>"},
         success:function(response)
         {
             $( "#" + elemid ).html(response);

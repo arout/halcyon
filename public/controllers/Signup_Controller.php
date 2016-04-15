@@ -1,20 +1,10 @@
 <?php
 
-class Login_Controller extends Hal\Core\SystemController {
+class Signup_Controller extends Hal\Core\SystemController {
 
 	public function index() {
 
-		// Is two-step login process enabled?
-		if ($this->config->setting['login_math'] === TRUE) {
-
-			$data['a'] = rand(1, 5);
-			$data['b'] = rand(1, 5);
-			$data['answer'] = $data['a'] * $data['b'];
-			$this->load->view('forms/login_form', $data);
-		} else {
-
-			$this->load->view('forms/login_form');
-		}
+		$this->load->view('forms/signup_form');
 	}
 
 	public function logout() {

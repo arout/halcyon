@@ -82,7 +82,7 @@
  */
 $sliders = [
 	'home/index' => 'homepage',
-	'login'      => 'whyregister',
+	'login' => 'whyregister',
 ];
 
 $this->toolbox('slider')->load($sliders);
@@ -102,7 +102,7 @@ if ($app['session']->get('email') === FALSE) {
 ?>
 
 <div class="clearfix"></div>
-
+<p style="padding-top: 60px"></p>
 <section class="content">
     <div class="container">
         <div class="inner-page homepage margin-bottom-none">

@@ -55,7 +55,7 @@ class Sanitize {
 
 	// Used to store key/values for form sanitation
 	public $data = array();
-	public $key  = array();
+	public $key = array();
 	private $toolbox;
 	private $allowable_tags = '';
 
@@ -102,7 +102,7 @@ class Sanitize {
 		 * @param string $filename The filename to be sanitized
 		 * @return string The sanitized filename
 		 */
-		$filename_raw  = $filename;
+		$filename_raw = $filename;
 		$special_chars =
 		array(
 			"?", "[", "]", "/", "\\", "=", "<", ">", ":", ";", ",", "'", "\"",
@@ -110,9 +110,9 @@ class Sanitize {
 		);
 
 		$special_chars = apply_filters('sanitize_file_name_chars', $special_chars, $filename_raw);
-		$filename      = str_replace($special_chars, '', $filename);
-		$filename      = preg_replace('/[\s-]+/', '-', $filename);
-		$filename      = trim($filename, '.-_');
+		$filename = str_replace($special_chars, '', $filename);
+		$filename = preg_replace('/[\s-]+/', '-', $filename);
+		$filename = trim($filename, '.-_');
 
 		return apply_filters('sanitize_file_name', $filename, $filename_raw);
 	}
@@ -173,25 +173,25 @@ class Sanitize {
 
 	public function remove_email($string = NULL) {
 
-		/*
 		// Remove email addresses from string
-		preg_match_all( "/[\._a-zA-Z0-9- ]+@[\._a-zA-Z0-9- ]+/i", $string, $matches );
-		$cleaned = str_replace( $matches[0], '<< email adress removed >>', $matches[0] );
-		foreach( $cleaned as $clean )
-		echo $clean;
-		 */
+		preg_match_all("/[\._a-zA-Z0-9- ]+@[\._a-zA-Z0-9- ]+/i", $string, $matches);
+		$cleaned = str_replace($matches[0], '<< email adress removed >>', $matches[0]);
+		foreach ($cleaned as $clean) {
+			echo $clean;
+		}
+
 		return $string;
 	}
 
 	public function remove_url($string = NULL) {
 
 		/*
-		// Remove URLs from string
-		preg_match_all( "/[\._a-zA-Z0-9- ]+@[\._a-zA-Z0-9- ]+/i", $string, $matches );
-		$cleaned = str_replace( $matches[0], '<< email adress removed >>', $matches[0] );
-		foreach( $cleaned as $clean )
-		echo $clean;
-		 */
+			// Remove URLs from string
+			preg_match_all( "/[\._a-zA-Z0-9- ]+@[\._a-zA-Z0-9- ]+/i", $string, $matches );
+			$cleaned = str_replace( $matches[0], '<< email adress removed >>', $matches[0] );
+			foreach( $cleaned as $clean )
+			echo $clean;
+		*/
 		return $string;
 	}
 

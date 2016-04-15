@@ -76,7 +76,7 @@ $app['helper'] = function ($c) {
 $app['breadcrumbs'] = function ($c) {
 
 	\Hal\Core\Registry::register('toolbox/breadcrumbs', 'toolbox/breadcrumbs');
-	$bc = new \Hal\Extensions\Breadcrumbs($c['router'], $c['config']);
+	$bc = new \Hal\Toolbox\Breadcrumbs($c['router'], $c['config']);
 	$bc->show();
 	return $bc;
 };
@@ -88,37 +88,37 @@ $app['cookie'] = function ($c) {
 
 $app['email'] = function ($c) {
 	\Hal\Core\Registry::register('toolbox/email', 'toolbox/email');
-	return new \Hal\Extensions\Email;
+	return new \Hal\Toolbox\Email($c);
 };
 
 $app['formatter'] = function ($c) {
 	\Hal\Core\Registry::register('toolbox/formatter', 'toolbox/formatter');
-	return new \Hal\Extensions\Formatter;
+	return new \Hal\Toolbox\Formatter;
 };
 
 $app['friends'] = function ($c) {
 	\Hal\Core\Registry::register('toolbox/friends', 'toolbox/friends');
-	return new \Hal\Extensions\Friends($c['database'], $c['toolbox'], $c['system_model']);
+	return new \Hal\Toolbox\Friends($c['database'], $c['toolbox'], $c['system_model']);
 };
 
 $app['geoip'] = function ($c) {
 	\Hal\Core\Registry::register('toolbox/geoip', 'toolbox/geoip');
-	return new \Hal\Extensions\Geoip($c['database']);
+	return new \Hal\Toolbox\Geoip($c['database']);
 };
 
 $app['hash'] = function ($c) {
 	\Hal\Core\Registry::register('toolbox/hash', 'toolbox/hash');
-	return new \Hal\Extensions\Hash;
+	return new \Hal\Toolbox\Hash;
 };
 
 $app['image'] = function ($c) {
 	\Hal\Core\Registry::register('toolbox/image', 'toolbox/image');
-	return new \Hal\Extensions\Image($c['config'], $c['toolbox']);
+	return new \Hal\Toolbox\Image($c['config'], $c['toolbox']);
 };
 
 $app['input'] = function ($c) {
 	\Hal\Core\Registry::register('toolbox/input', 'toolbox/input');
-	return new \Hal\Extensions\Input($c['sanitize'], $c['validate']);
+	return new \Hal\Toolbox\Input($c['sanitize'], $c['validate']);
 };
 
 $app['memcached'] = function ($c) {
@@ -129,7 +129,7 @@ $app['memcached'] = function ($c) {
 
 $app['messenger'] = function ($c) {
 	\Hal\Core\Registry::register('toolbox/messenger', 'toolbox/messenger');
-	return new \Hal\Extensions\Messenger($c['database'], $c['toolbox']);
+	return new \Hal\Toolbox\Messenger($c['database'], $c['toolbox']);
 };
 
 $app['opcache'] = function ($c) {
@@ -139,12 +139,12 @@ $app['opcache'] = function ($c) {
 
 $app['pagination'] = function ($c) {
 	\Hal\Core\Registry::register('toolbox/pagination', 'toolbox/pagination');
-	return new \Hal\Extensions\Pagination($c);
+	return new \Hal\Toolbox\Pagination($c);
 };
 
 $app['performance'] = function ($c) {
 	\Hal\Core\Registry::register('toolbox/performance', 'toolbox/performance');
-	return new \Hal\Extensions\Performance;
+	return new \Hal\Toolbox\Performance;
 };
 
 $app['sanitize'] = function ($c) {
@@ -154,7 +154,7 @@ $app['sanitize'] = function ($c) {
 
 $app['search'] = function ($c) {
 	\Hal\Core\Registry::register('toolbox/search', 'toolbox/search');
-	return new \Hal\Extensions\Search($c['database']);
+	return new \Hal\Toolbox\Search($c['database']);
 };
 
 $app['session'] = function ($c) {
@@ -179,7 +179,7 @@ $app['title'] = function ($c) {
 
 $app['validate'] = function ($c) {
 	\Hal\Core\Registry::register('toolbox/validate', 'toolbox/validate');
-	return new \Hal\Extensions\Validation;
+	return new \Hal\Toolbox\Validation;
 };
 
 $app['toolbox'] = function ($c) {
