@@ -8,11 +8,8 @@
  * @license         http://kwfusion.com/support/license
  * @link            http://kwfusion.com
  * @since           Version 1.0
- * @filesource
  *
- */error_reporting(E_ALL);
-ini_set('display_errors', 'On');
-ini_set('error_reporting', E_ALL);
+ */
 
 # Edit to match your time zone
 date_default_timezone_set('America/New_York');
@@ -45,8 +42,8 @@ if ($hal->config->setting('compression') === FALSE) {
 	ob_start();
 } else {
 	# Use zlib for output compression
-	//ini_set('zlib.output_compression', 4096);
-	//ini_set('zlib.output_compression_level', "-1");
+	ini_set('zlib.output_compression', 4096);
+	ini_set('zlib.output_compression_level', "-1");
 	ob_start();
 }
 # $hal['opcache']->configuration();
