@@ -1,5 +1,5 @@
-# HALCYON FRAMEWORK IS NOW DIAMONDPHP
-=====================================
+# HALCYON FRAMEWORK IS NO LONGER SUPPORTED
+==========================================
 
 This project has been completely redone from the ground up, and is now known as Diamond PHP framework.
 
